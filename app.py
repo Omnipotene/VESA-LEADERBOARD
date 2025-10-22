@@ -342,6 +342,19 @@ def format_rank_change(change):
     else:
         return '<span>=</span>'
 
+def is_read_only_environment():
+    """Check if we're running in a read-only environment (like Streamlit Cloud)"""
+    try:
+        # Try to write a test file
+        import os
+        test_file = '.write_test'
+        with open(test_file, 'w') as f:
+            f.write('test')
+        os.remove(test_file)
+        return False
+    except:
+        return True
+
 def verify_admin_password(password):
     """Verify admin password against stored hash"""
     try:
@@ -639,6 +652,22 @@ def main():
 
         if admin_mode:
             st.success("✅ Admin Mode Enabled - You can now adjust settings")
+
+            # Check if we're on Streamlit Cloud and show warning
+            if is_read_only_environment():
+                st.warning("""
+                    ⚠️ **Running on Streamlit Cloud (Read-Only Mode)**
+
+                    The database is read-only on Streamlit Cloud. Any changes you make will be:
+                    - Temporary and stored in session state only
+                    - Reset when you reload the page
+                    - Useful for previewing how settings would affect calculations
+
+                    To make permanent changes:
+                    1. Update the database locally on your development machine
+                    2. Commit and push your changes to GitHub
+                    3. The app will automatically redeploy with the new database
+                """)
         else:
             st.info("ℹ️ Viewing current settings (Login with admin password to edit)")
 
@@ -845,70 +874,77 @@ def main():
 
             with col2:
                 if st.button("✅ Apply New Thresholds", key="apply_tier_thresholds", type="primary", use_container_width=True):
-                    # Apply the new tier assignments
-                    with st.spinner("Updating tier assignments in database..."):
-                        try:
-                            # Function to assign tier based on rating
-                            def assign_tier(rating, thresholds):
-                                if rating >= thresholds['S+']:
-                                    return 'S+'
-                                elif rating >= thresholds['S']:
-                                    return 'S'
-                                elif rating >= thresholds['A+']:
-                                    return 'A+'
-                                elif rating >= thresholds['A']:
-                                    return 'A'
-                                elif rating >= thresholds['B+']:
-                                    return 'B+'
-                                elif rating >= thresholds['B']:
-                                    return 'B'
-                                elif rating >= thresholds['C+']:
-                                    return 'C+'
-                                elif rating >= thresholds['C']:
-                                    return 'C'
-                                elif rating >= thresholds['C-']:
-                                    return 'C-'
-                                elif rating >= thresholds['D+']:
-                                    return 'D+'
-                                elif rating >= thresholds['D']:
-                                    return 'D'
-                                else:
-                                    return 'D-'
+                    # Check if we're in a read-only environment
+                    if is_read_only_environment():
+                        # Store changes in session state only (temporary)
+                        st.session_state.tier_thresholds_applied = True
+                        st.warning("⚠️ Running on Streamlit Cloud (read-only database). Tier threshold changes are temporary and will reset on page reload. To make permanent changes, update the database locally and redeploy.")
+                        st.info("ℹ️ Changes saved to session - you can preview the new tier distribution below.")
+                    else:
+                        # Apply the new tier assignments to database (local development)
+                        with st.spinner("Updating tier assignments in database..."):
+                            try:
+                                # Function to assign tier based on rating
+                                def assign_tier(rating, thresholds):
+                                    if rating >= thresholds['S+']:
+                                        return 'S+'
+                                    elif rating >= thresholds['S']:
+                                        return 'S'
+                                    elif rating >= thresholds['A+']:
+                                        return 'A+'
+                                    elif rating >= thresholds['A']:
+                                        return 'A'
+                                    elif rating >= thresholds['B+']:
+                                        return 'B+'
+                                    elif rating >= thresholds['B']:
+                                        return 'B'
+                                    elif rating >= thresholds['C+']:
+                                        return 'C+'
+                                    elif rating >= thresholds['C']:
+                                        return 'C'
+                                    elif rating >= thresholds['C-']:
+                                        return 'C-'
+                                    elif rating >= thresholds['D+']:
+                                        return 'D+'
+                                    elif rating >= thresholds['D']:
+                                        return 'D'
+                                    else:
+                                        return 'D-'
 
-                            # Get database connection
-                            conn = get_database_connection()
-                            cursor = conn.cursor()
+                                # Get database connection
+                                conn = get_database_connection()
+                                cursor = conn.cursor()
 
-                            # Get all S12 teams
-                            cursor.execute("""
-                                SELECT team_id, team_rating
-                                FROM teams
-                                WHERE season_id = (SELECT season_id FROM seasons WHERE season_name = 'S12')
-                            """)
-                            teams = cursor.fetchall()
-
-                            # Update each team's tier in the database
-                            teams_updated = 0
-                            for team_id, team_rating in teams:
-                                new_tier = assign_tier(team_rating, st.session_state.tier_thresholds)
+                                # Get all S12 teams
                                 cursor.execute("""
-                                    UPDATE teams
-                                    SET tier = ?
-                                    WHERE team_id = ?
-                                """, (new_tier, team_id))
-                                teams_updated += 1
+                                    SELECT team_id, team_rating
+                                    FROM teams
+                                    WHERE season_id = (SELECT season_id FROM seasons WHERE season_name = 'S12')
+                                """)
+                                teams = cursor.fetchall()
 
-                            # Commit the changes
-                            conn.commit()
+                                # Update each team's tier in the database
+                                teams_updated = 0
+                                for team_id, team_rating in teams:
+                                    new_tier = assign_tier(team_rating, st.session_state.tier_thresholds)
+                                    cursor.execute("""
+                                        UPDATE teams
+                                        SET tier = ?
+                                        WHERE team_id = ?
+                                    """, (new_tier, team_id))
+                                    teams_updated += 1
 
-                            # Clear cache to reload data with new tiers from database
-                            load_teams.clear()
-                            load_divisions.clear()
+                                # Commit the changes
+                                conn.commit()
 
-                            st.success(f"✅ Tier thresholds applied! {teams_updated} teams have been permanently reassigned to new tiers in the database.")
-                            st.rerun()
-                        except Exception as e:
-                            st.error(f"Error applying tier thresholds: {str(e)}")
+                                # Clear cache to reload data with new tiers from database
+                                load_teams.clear()
+                                load_divisions.clear()
+
+                                st.success(f"✅ Tier thresholds applied! {teams_updated} teams have been permanently reassigned to new tiers in the database.")
+                                st.rerun()
+                            except Exception as e:
+                                st.error(f"Error applying tier thresholds: {str(e)}")
 
         else:
             # Read-only view of current thresholds
@@ -1020,31 +1056,39 @@ def main():
 
             with col2:
                 if st.button("✅ Apply Lobby Bonuses", key="apply_lobby_bonuses", type="primary", use_container_width=True):
-                    with st.spinner("Updating lobby bonuses in database..."):
-                        try:
-                            conn = get_database_connection()
-                            cursor = conn.cursor()
+                    # Check if we're in a read-only environment
+                    if is_read_only_environment():
+                        # Store changes in session state only (temporary)
+                        st.session_state.lobby_bonuses_applied = True
+                        st.warning("⚠️ Running on Streamlit Cloud (read-only database). Lobby bonus changes are temporary and will reset on page reload. To make permanent changes, update the database locally and redeploy.")
+                        st.info("ℹ️ Changes saved to session - these bonuses will be used for recalculation preview.")
+                    else:
+                        # Apply to database (local development)
+                        with st.spinner("Updating lobby bonuses in database..."):
+                            try:
+                                conn = get_database_connection()
+                                cursor = conn.cursor()
 
-                            # Update each lobby bonus in the database
-                            bonuses_updated = 0
-                            for lobby_num, bonus_pct in st.session_state.lobby_bonuses.items():
-                                cursor.execute("""
-                                    UPDATE lobby_definitions
-                                    SET bonus_percentage = ?
-                                    WHERE lobby_number = ?
-                                """, (bonus_pct, lobby_num))
-                                bonuses_updated += 1
+                                # Update each lobby bonus in the database
+                                bonuses_updated = 0
+                                for lobby_num, bonus_pct in st.session_state.lobby_bonuses.items():
+                                    cursor.execute("""
+                                        UPDATE lobby_definitions
+                                        SET bonus_percentage = ?
+                                        WHERE lobby_number = ?
+                                    """, (bonus_pct, lobby_num))
+                                    bonuses_updated += 1
 
-                            # Commit the changes
-                            conn.commit()
+                                # Commit the changes
+                                conn.commit()
 
-                            # Clear cache to reload data with new bonuses from database
-                            load_lobby_bonuses_from_db.clear()
+                                # Clear cache to reload data with new bonuses from database
+                                load_lobby_bonuses_from_db.clear()
 
-                            st.success(f"✅ Lobby bonuses applied! {bonuses_updated} lobby bonus percentages have been permanently updated in the database.")
-                            st.rerun()
-                        except Exception as e:
-                            st.error(f"Error applying lobby bonuses: {str(e)}")
+                                st.success(f"✅ Lobby bonuses applied! {bonuses_updated} lobby bonus percentages have been permanently updated in the database.")
+                                st.rerun()
+                            except Exception as e:
+                                st.error(f"Error applying lobby bonuses: {str(e)}")
 
         else:
             # Read-only view
@@ -1083,34 +1127,42 @@ def main():
 
             # Apply season weights button
             if st.button("✅ Apply Season Weights", type="primary", use_container_width=True):
-                with st.spinner("Updating season weights in database..."):
-                    try:
-                        conn = get_database_connection()
-                        cursor = conn.cursor()
+                # Check if we're in a read-only environment
+                if is_read_only_environment():
+                    # Store changes in session state only (temporary)
+                    st.session_state.season_weights_applied = True
+                    st.warning("⚠️ Running on Streamlit Cloud (read-only database). Season weight changes are temporary and will reset on page reload. To make permanent changes, update the database locally and redeploy.")
+                    st.info("ℹ️ Changes saved to session - these weights will be used for recalculation preview.")
+                else:
+                    # Apply to database (local development)
+                    with st.spinner("Updating season weights in database..."):
+                        try:
+                            conn = get_database_connection()
+                            cursor = conn.cursor()
 
-                        # Update season weights in the database
-                        cursor.execute("""
-                            UPDATE season_weights
-                            SET weight_percentage = ?
-                            WHERE season_name = 'S12'
-                        """, (st.session_state.season_weights['S12'],))
+                            # Update season weights in the database
+                            cursor.execute("""
+                                UPDATE season_weights
+                                SET weight_percentage = ?
+                                WHERE season_name = 'S12'
+                            """, (st.session_state.season_weights['S12'],))
 
-                        cursor.execute("""
-                            UPDATE season_weights
-                            SET weight_percentage = ?
-                            WHERE season_name = 'S11'
-                        """, (st.session_state.season_weights['S11'],))
+                            cursor.execute("""
+                                UPDATE season_weights
+                                SET weight_percentage = ?
+                                WHERE season_name = 'S11'
+                            """, (st.session_state.season_weights['S11'],))
 
-                        # Commit the changes
-                        conn.commit()
+                            # Commit the changes
+                            conn.commit()
 
-                        # Clear cache to reload data with new weights from database
-                        load_season_weights_from_db.clear()
+                            # Clear cache to reload data with new weights from database
+                            load_season_weights_from_db.clear()
 
-                        st.success(f"✅ Season weights applied! S12={st.session_state.season_weights['S12']:.0f}%, S11={st.session_state.season_weights['S11']:.0f}% have been permanently saved to the database.")
-                        st.rerun()
-                    except Exception as e:
-                        st.error(f"Error applying season weights: {str(e)}")
+                            st.success(f"✅ Season weights applied! S12={st.session_state.season_weights['S12']:.0f}%, S11={st.session_state.season_weights['S11']:.0f}% have been permanently saved to the database.")
+                            st.rerun()
+                        except Exception as e:
+                            st.error(f"Error applying season weights: {str(e)}")
 
         else:
             with st.expander("⚖️ View Current Season Weights", expanded=False):
