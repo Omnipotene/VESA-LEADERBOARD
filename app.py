@@ -187,6 +187,36 @@ def load_player_lobby_performances():
     df = pd.read_sql_query(query, conn)
     return df
 
+@st.cache_data(ttl=300)
+def load_lobby_bonuses_from_db():
+    """Load lobby bonus percentages from database"""
+    conn = get_database_connection()
+    query = "SELECT lobby_number, bonus_percentage FROM lobby_definitions ORDER BY lobby_number"
+    df = pd.read_sql_query(query, conn)
+    # Convert to dictionary
+    bonuses = {}
+    for _, row in df.iterrows():
+        lobby_val = float(row['lobby_number'])
+        # Format lobby number as string (e.g., "1" or "1.5")
+        if lobby_val.is_integer():
+            lobby_key = str(int(lobby_val))
+        else:
+            lobby_key = str(lobby_val)
+        bonuses[lobby_key] = float(row['bonus_percentage'])
+    return bonuses
+
+@st.cache_data(ttl=300)
+def load_season_weights_from_db():
+    """Load season weights from database"""
+    conn = get_database_connection()
+    query = "SELECT season_name, weight_percentage FROM season_weights ORDER BY season_name DESC"
+    df = pd.read_sql_query(query, conn)
+    # Convert to dictionary
+    weights = {}
+    for _, row in df.iterrows():
+        weights[row['season_name']] = float(row['weight_percentage'])
+    return weights
+
 def recalculate_player_ratings(lobby_performances_df, lobby_bonuses, season_weights):
     """Recalculate player ratings with new lobby bonuses and season weights"""
     # Group by player and season
@@ -817,23 +847,9 @@ def main():
         if admin_mode:
             st.write("Adjust lobby bonus percentages (applied additively per lobby appearance):")
 
-            # Initialize session state for lobby bonuses
+            # Initialize session state for lobby bonuses from database
             if 'lobby_bonuses' not in st.session_state:
-                st.session_state.lobby_bonuses = {
-                    '1': 8192.0,
-                    '1.5': 4096.0,
-                    '2': 2048.0,
-                    '2.5': 1024.0,
-                    '3': 512.0,
-                    '3.5': 256.0,
-                    '4': 128.0,
-                    '4.5': 64.0,
-                    '5': 32.0,
-                    '5.5': 16.0,
-                    '6': 8.0,
-                    '6.5': 4.0,
-                    '7': 2.0
-                }
+                st.session_state.lobby_bonuses = load_lobby_bonuses_from_db()
 
             # Create 3 columns for lobby bonus inputs
             col1, col2, col3 = st.columns(3)
@@ -899,26 +915,52 @@ def main():
                     min_value=0.0, step=0.5, format="%.2f"
                 )
 
-            # Reset button for lobby bonuses
-            if st.button("🔄 Reset Lobby Bonuses to Defaults", type="secondary"):
-                st.session_state.lobby_bonuses = {
-                    '1': 8192.0, '1.5': 4096.0, '2': 2048.0, '2.5': 1024.0,
-                    '3': 512.0, '3.5': 256.0, '4': 128.0, '4.5': 64.0,
-                    '5': 32.0, '5.5': 16.0, '6': 8.0, '6.5': 4.0, '7': 2.0
-                }
-                st.rerun()
+            # Buttons for lobby bonuses
+            col1, col2 = st.columns(2)
+            with col1:
+                if st.button("🔄 Reset to Defaults", type="secondary", use_container_width=True):
+                    st.session_state.lobby_bonuses = {
+                        '1': 8192.0, '1.5': 4096.0, '2': 2048.0, '2.5': 1024.0,
+                        '3': 512.0, '3.5': 256.0, '4': 128.0, '4.5': 64.0,
+                        '5': 32.0, '5.5': 16.0, '6': 8.0, '6.5': 4.0, '7': 2.0
+                    }
+                    st.rerun()
+
+            with col2:
+                if st.button("✅ Apply Lobby Bonuses", type="primary", use_container_width=True):
+                    with st.spinner("Updating lobby bonuses in database..."):
+                        try:
+                            conn = get_database_connection()
+                            cursor = conn.cursor()
+
+                            # Update each lobby bonus in the database
+                            bonuses_updated = 0
+                            for lobby_num, bonus_pct in st.session_state.lobby_bonuses.items():
+                                cursor.execute("""
+                                    UPDATE lobby_definitions
+                                    SET bonus_percentage = ?
+                                    WHERE lobby_number = ?
+                                """, (bonus_pct, lobby_num))
+                                bonuses_updated += 1
+
+                            # Commit the changes
+                            conn.commit()
+
+                            # Clear cache to reload data with new bonuses from database
+                            load_lobby_bonuses_from_db.clear()
+
+                            st.success(f"✅ Lobby bonuses applied! {bonuses_updated} lobby bonus percentages have been permanently updated in the database.")
+                            st.rerun()
+                        except Exception as e:
+                            st.error(f"Error applying lobby bonuses: {str(e)}")
 
         else:
             # Read-only view
             with st.expander("🔢 View Current Lobby Bonuses", expanded=False):
-                bonuses = {
-                    'Lobby 1': '8192%', 'Lobby 1.5': '4096%', 'Lobby 2': '2048%',
-                    'Lobby 2.5': '1024%', 'Lobby 3': '512%', 'Lobby 3.5': '256%',
-                    'Lobby 4': '128%', 'Lobby 4.5': '64%', 'Lobby 5': '32%',
-                    'Lobby 5.5': '16%', 'Lobby 6': '8%', 'Lobby 6.5': '4%', 'Lobby 7': '2%'
-                }
-                for lobby, bonus in bonuses.items():
-                    st.text(f"{lobby}: {bonus}")
+                db_bonuses = load_lobby_bonuses_from_db()
+                for lobby_num in ['1', '1.5', '2', '2.5', '3', '3.5', '4', '4.5', '5', '5.5', '6', '6.5', '7']:
+                    bonus_pct = db_bonuses.get(lobby_num, 0)
+                    st.text(f"Lobby {lobby_num}: {bonus_pct:.2f}%")
 
         st.divider()
 
@@ -928,15 +970,15 @@ def main():
         if admin_mode:
             st.write("Adjust the weighting between seasons (must sum to 100%):")
 
-            # Initialize session state for season weights
+            # Initialize session state for season weights from database
             if 'season_weights' not in st.session_state:
-                st.session_state.season_weights = {'S12': 100.0, 'S11': 0.0}
+                st.session_state.season_weights = load_season_weights_from_db()
 
             col1, col2 = st.columns(2)
             with col1:
                 s12_weight = st.slider(
                     "S12 Weight (%)", min_value=0.0, max_value=100.0,
-                    value=st.session_state.season_weights['S12'], step=5.0
+                    value=st.session_state.season_weights.get('S12', 100.0), step=5.0
                 )
             with col2:
                 s11_weight = 100.0 - s12_weight
@@ -947,10 +989,42 @@ def main():
             if s12_weight + s11_weight != 100.0:
                 st.warning("⚠️ Weights must sum to 100%")
 
+            # Apply season weights button
+            if st.button("✅ Apply Season Weights", type="primary", use_container_width=True):
+                with st.spinner("Updating season weights in database..."):
+                    try:
+                        conn = get_database_connection()
+                        cursor = conn.cursor()
+
+                        # Update season weights in the database
+                        cursor.execute("""
+                            UPDATE season_weights
+                            SET weight_percentage = ?
+                            WHERE season_name = 'S12'
+                        """, (st.session_state.season_weights['S12'],))
+
+                        cursor.execute("""
+                            UPDATE season_weights
+                            SET weight_percentage = ?
+                            WHERE season_name = 'S11'
+                        """, (st.session_state.season_weights['S11'],))
+
+                        # Commit the changes
+                        conn.commit()
+
+                        # Clear cache to reload data with new weights from database
+                        load_season_weights_from_db.clear()
+
+                        st.success(f"✅ Season weights applied! S12={st.session_state.season_weights['S12']:.0f}%, S11={st.session_state.season_weights['S11']:.0f}% have been permanently saved to the database.")
+                        st.rerun()
+                    except Exception as e:
+                        st.error(f"Error applying season weights: {str(e)}")
+
         else:
             with st.expander("⚖️ View Current Season Weights", expanded=False):
-                st.text("S12: 100%")
-                st.text("S11: 0%")
+                db_weights = load_season_weights_from_db()
+                st.text(f"S12: {db_weights.get('S12', 100):.0f}%")
+                st.text(f"S11: {db_weights.get('S11', 0):.0f}%")
 
         st.divider()
 
