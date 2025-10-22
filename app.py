@@ -826,7 +826,7 @@ def main():
             # Reset and Apply buttons
             col1, col2 = st.columns(2)
             with col1:
-                if st.button("🔄 Reset to Defaults", type="secondary", use_container_width=True):
+                if st.button("🔄 Reset to Defaults", key="reset_tier_thresholds", type="secondary", use_container_width=True):
                     st.session_state.tier_thresholds = {
                         'S+': 15000.0,
                         'S': 8000.0,
@@ -844,7 +844,7 @@ def main():
                     st.rerun()
 
             with col2:
-                if st.button("✅ Apply New Thresholds", type="primary", use_container_width=True):
+                if st.button("✅ Apply New Thresholds", key="apply_tier_thresholds", type="primary", use_container_width=True):
                     # Apply the new tier assignments
                     with st.spinner("Updating tier assignments in database..."):
                         try:
@@ -1010,7 +1010,7 @@ def main():
             # Buttons for lobby bonuses
             col1, col2 = st.columns(2)
             with col1:
-                if st.button("🔄 Reset to Defaults", type="secondary", use_container_width=True):
+                if st.button("🔄 Reset to Defaults", key="reset_lobby_bonuses", type="secondary", use_container_width=True):
                     st.session_state.lobby_bonuses = {
                         '1': 8192.0, '1.5': 4096.0, '2': 2048.0, '2.5': 1024.0,
                         '3': 512.0, '3.5': 256.0, '4': 128.0, '4.5': 64.0,
@@ -1019,7 +1019,7 @@ def main():
                     st.rerun()
 
             with col2:
-                if st.button("✅ Apply Lobby Bonuses", type="primary", use_container_width=True):
+                if st.button("✅ Apply Lobby Bonuses", key="apply_lobby_bonuses", type="primary", use_container_width=True):
                     with st.spinner("Updating lobby bonuses in database..."):
                         try:
                             conn = get_database_connection()
