@@ -344,34 +344,14 @@ def format_rank_change(change):
 
 def verify_admin_password(password):
     """Verify admin password against stored hash"""
-    conn = get_database_connection()
-    cursor = conn.cursor()
-
     try:
-        # Try to create the admin_config table if it doesn't exist
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS admin_config (
-                config_key VARCHAR(50) PRIMARY KEY,
-                config_value TEXT NOT NULL,
-                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-            )
-        """)
+        # Try to get password hash from Streamlit secrets first
+        if hasattr(st, 'secrets') and 'admin_password_hash' in st.secrets:
+            stored_hash = st.secrets['admin_password_hash']
+        else:
+            # Fallback to default hash for local development
+            stored_hash = '5c92f47698b144c721c98abbf36afbed62b3f7fb4da8e2d1f9da809d65fa5222'
 
-        # Check if password hash exists, if not insert default
-        cursor.execute("SELECT config_value FROM admin_config WHERE config_key = 'admin_password_hash'")
-        result = cursor.fetchone()
-
-        if result is None:
-            # Insert default password hash for 'vesaadmin1'
-            default_hash = '5c92f47698b144c721c98abbf36afbed62b3f7fb4da8e2d1f9da809d65fa5222'
-            cursor.execute("""
-                INSERT INTO admin_config (config_key, config_value)
-                VALUES ('admin_password_hash', ?)
-            """, (default_hash,))
-            conn.commit()
-            result = (default_hash,)
-
-        stored_hash = result[0]
         input_hash = hashlib.sha256(password.encode()).hexdigest()
 
         # Store debug info in session state for display
@@ -380,6 +360,7 @@ def verify_admin_password(password):
         st.session_state.debug_info['stored_hash'] = stored_hash
         st.session_state.debug_info['input_hash'] = input_hash
         st.session_state.debug_info['match'] = (input_hash == stored_hash)
+        st.session_state.debug_info['using_secrets'] = hasattr(st, 'secrets') and 'admin_password_hash' in st.secrets
 
         return input_hash == stored_hash
     except Exception as e:
@@ -644,6 +625,7 @@ def main():
                             if 'error' in st.session_state.debug_info:
                                 st.error(f"Error: {st.session_state.debug_info['error']}")
                             else:
+                                st.write(f"**Using Secrets:** {st.session_state.debug_info.get('using_secrets', False)}")
                                 st.write(f"**Stored hash:** {st.session_state.debug_info.get('stored_hash', 'N/A')[:16]}...")
                                 st.write(f"**Input hash:** {st.session_state.debug_info.get('input_hash', 'N/A')[:16]}...")
                                 st.write(f"**Match:** {st.session_state.debug_info.get('match', 'N/A')}")

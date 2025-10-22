@@ -1,0 +1,12 @@
+{
+  "comment": "Map player aliases to their canonical name",
+  "aliases": {
+    "OldName1": "CurrentName",
+    "OldName2": "CurrentName",
+    "AlternateSpelling": "CorrectName"
+  },
+  "examples": {
+    "Anteater": "Anteatter",
+    "LUMI_OLD": "LUMI"
+  }
+}

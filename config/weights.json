@@ -1,0 +1,31 @@
+{
+  "lobby_weights": {
+    "system": "aggressive",
+    "decay_factor": 0.80,
+    "weights": {
+      "1": 1.00,
+      "1.5": 0.90,
+      "2": 0.80,
+      "2.5": 0.705,
+      "3": 0.64,
+      "3.5": 0.575,
+      "4": 0.51,
+      "4.5": 0.44,
+      "5": 0.41,
+      "5.5": 0.34,
+      "6": 0.33,
+      "6.5": 0.27,
+      "7": 0.26
+    }
+  },
+  "day_weights": {
+    "system": "optionB",
+    "description": "Aggressive - Day 4 counts significantly more",
+    "weights": {
+      "1": 1.0,
+      "2": 1.15,
+      "3": 1.35,
+      "4": 1.6
+    }
+  }
+}

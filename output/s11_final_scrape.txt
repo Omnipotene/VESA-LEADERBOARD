@@ -1,0 +1,62 @@
+VESA League - Multi-Season Alias Scraper
+======================================================================
+Roster files to process:
+  ✓ S12: data/rosters.csv
+  ✓ S11: data/Copy of VESA Season 11 Signups - Signup Responses.csv
+  ✓ S10: data/Copy of VESA Season 10 Signup Form (Responses) - Signup responses.csv
+  ✓ S8: data/Copy of VESA Apex Season 8 Signups (v 2.0) - Signups.csv
+
+Processing S12 roster...
+  Found 443 players in S12
+Processing S11 roster...
+  Found 393 players in S11
+Processing S10 roster...
+  Found 373 players in S10
+Processing S8 roster...
+  Found 308 players in S8
+
+Total players found: 1517
+Unique players: 851
+Loaded 763 existing alias records
+
+New players to scrape: 88
+Already have data for: 763 players
+
+Scraping aliases for 88 new players...
+----------------------------------------------------------------------
+  anteatter: 4 aliases found
+  ImTheBigFork: 2 aliases found
+  turtlfps: 2 aliases found
+  vivirya: 10 aliases found
+  kyri_o: 27 aliases found
+Progress: 10/88
+Progress: 20/88
+Progress: 30/88
+Progress: 40/88
+Progress: 50/88
+Progress: 60/88
+Progress: 70/88
+Progress: 80/88
+  JackHeDoesIt: ERROR - Timeout 10000ms exceeded.
+
+======================================================================
+SCRAPING COMPLETE
+======================================================================
+New players scraped: 87/88
+Failed: 1/88
+
+Saved to: data/player_aliases.json
+
+Total players in database: 850
+Total aliases collected: 7248
+Average aliases per player: 8.5
+
+======================================================================
+Next steps:
+  1. Add more roster files to ROSTER_FILES at the top of this script
+  2. Re-run this script to scrape more players
+  3. When done, regenerate ratings:
+     python3 combine_all_seasons.py
+     python3 apply_top_lobby_bonus_all_seasons.py
+     python3 team_seeding_combined.py
+     python3 division_seeding.py

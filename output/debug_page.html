@@ -1,0 +1,565 @@
+<!DOCTYPE html><html lang="en"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-DZP7G2NV5X"></script><script>window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DZP7G2NV5X');</script><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.png"><meta property="og:title" content="Overstat.GG"><meta property="og:type" content="website"><meta property="og:image" content="/favicon.png"><meta property="og:description" content="Overstat.GG -- Apex Tournament Tools"><meta name="theme-color" content="#FF0000"><meta name="twitter:card" content="summary_large_image"><title>Standings -  -  - Overstat.gg</title><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;display=swap"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;300&amp;display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;900&amp;display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap"><meta name="description" content="Overstat.GG -- Apex Tournament Tools"><script defer="defer" src="/js/chunk-vendors.c554ba7e.js"></script><script defer="defer" src="/js/app.d2c2ef46.js"></script><link href="/css/chunk-vendors.268e784f.css" rel="stylesheet"><link href="/css/app.5f2e3b12.css" rel="stylesheet"><link rel="stylesheet" type="text/css" href="/css/2983.1c8bd00b.css"><link rel="stylesheet" type="text/css" href="/css/9549.557debff.css"><link rel="stylesheet" type="text/css" href="/css/4312.ae60bb69.css"><link rel="stylesheet" type="text/css" href="/css/5219.d4e8d75a.css"><link rel="stylesheet" type="text/css" href="/css/1628.6b4a579b.css"><link rel="stylesheet" type="text/css" href="/css/5594.9571a628.css"><style type="text/css" id="vuetify-theme-stylesheet">.v-application a { color: #793706; }
+.v-application .primary {
+  background-color: #793706 !important;
+  border-color: #793706 !important;
+}
+.v-application .primary--text {
+  color: #793706 !important;
+  caret-color: #793706 !important;
+}
+.v-application .primary.lighten-5 {
+  background-color: #ffb681 !important;
+  border-color: #ffb681 !important;
+}
+.v-application .primary--text.text--lighten-5 {
+  color: #ffb681 !important;
+  caret-color: #ffb681 !important;
+}
+.v-application .primary.lighten-4 {
+  background-color: #ef9b67 !important;
+  border-color: #ef9b67 !important;
+}
+.v-application .primary--text.text--lighten-4 {
+  color: #ef9b67 !important;
+  caret-color: #ef9b67 !important;
+}
+.v-application .primary.lighten-3 {
+  background-color: #d0814e !important;
+  border-color: #d0814e !important;
+}
+.v-application .primary--text.text--lighten-3 {
+  color: #d0814e !important;
+  caret-color: #d0814e !important;
+}
+.v-application .primary.lighten-2 {
+  background-color: #b36736 !important;
+  border-color: #b36736 !important;
+}
+.v-application .primary--text.text--lighten-2 {
+  color: #b36736 !important;
+  caret-color: #b36736 !important;
+}
+.v-application .primary.lighten-1 {
+  background-color: #964f1f !important;
+  border-color: #964f1f !important;
+}
+.v-application .primary--text.text--lighten-1 {
+  color: #964f1f !important;
+  caret-color: #964f1f !important;
+}
+.v-application .primary.darken-1 {
+  background-color: #5e2000 !important;
+  border-color: #5e2000 !important;
+}
+.v-application .primary--text.text--darken-1 {
+  color: #5e2000 !important;
+  caret-color: #5e2000 !important;
+}
+.v-application .primary.darken-2 {
+  background-color: #460700 !important;
+  border-color: #460700 !important;
+}
+.v-application .primary--text.text--darken-2 {
+  color: #460700 !important;
+  caret-color: #460700 !important;
+}
+.v-application .primary.darken-3 {
+  background-color: #350000 !important;
+  border-color: #350000 !important;
+}
+.v-application .primary--text.text--darken-3 {
+  color: #350000 !important;
+  caret-color: #350000 !important;
+}
+.v-application .primary.darken-4 {
+  background-color: #2c0000 !important;
+  border-color: #2c0000 !important;
+}
+.v-application .primary--text.text--darken-4 {
+  color: #2c0000 !important;
+  caret-color: #2c0000 !important;
+}
+.v-application .secondary {
+  background-color: #261f1f !important;
+  border-color: #261f1f !important;
+}
+.v-application .secondary--text {
+  color: #261f1f !important;
+  caret-color: #261f1f !important;
+}
+.v-application .secondary.lighten-5 {
+  background-color: #9e9595 !important;
+  border-color: #9e9595 !important;
+}
+.v-application .secondary--text.text--lighten-5 {
+  color: #9e9595 !important;
+  caret-color: #9e9595 !important;
+}
+.v-application .secondary.lighten-4 {
+  background-color: #847b7b !important;
+  border-color: #847b7b !important;
+}
+.v-application .secondary--text.text--lighten-4 {
+  color: #847b7b !important;
+  caret-color: #847b7b !important;
+}
+.v-application .secondary.lighten-3 {
+  background-color: #6b6362 !important;
+  border-color: #6b6362 !important;
+}
+.v-application .secondary--text.text--lighten-3 {
+  color: #6b6362 !important;
+  caret-color: #6b6362 !important;
+}
+.v-application .secondary.lighten-2 {
+  background-color: #534b4b !important;
+  border-color: #534b4b !important;
+}
+.v-application .secondary--text.text--lighten-2 {
+  color: #534b4b !important;
+  caret-color: #534b4b !important;
+}
+.v-application .secondary.lighten-1 {
+  background-color: #3c3434 !important;
+  border-color: #3c3434 !important;
+}
+.v-application .secondary--text.text--lighten-1 {
+  color: #3c3434 !important;
+  caret-color: #3c3434 !important;
+}
+.v-application .secondary.darken-1 {
+  background-color: #120706 !important;
+  border-color: #120706 !important;
+}
+.v-application .secondary--text.text--darken-1 {
+  color: #120706 !important;
+  caret-color: #120706 !important;
+}
+.v-application .secondary.darken-2 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-2 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .secondary.darken-3 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-3 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .secondary.darken-4 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-4 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .accent {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+.v-application .accent--text {
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+}
+.v-application .accent.lighten-5 {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+.v-application .accent--text.text--lighten-5 {
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+}
+.v-application .accent.lighten-4 {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+.v-application .accent--text.text--lighten-4 {
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+}
+.v-application .accent.lighten-3 {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+.v-application .accent--text.text--lighten-3 {
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+}
+.v-application .accent.lighten-2 {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+.v-application .accent--text.text--lighten-2 {
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+}
+.v-application .accent.lighten-1 {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+.v-application .accent--text.text--lighten-1 {
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+}
+.v-application .accent.darken-1 {
+  background-color: #e2e2e2 !important;
+  border-color: #e2e2e2 !important;
+}
+.v-application .accent--text.text--darken-1 {
+  color: #e2e2e2 !important;
+  caret-color: #e2e2e2 !important;
+}
+.v-application .accent.darken-2 {
+  background-color: #c6c6c6 !important;
+  border-color: #c6c6c6 !important;
+}
+.v-application .accent--text.text--darken-2 {
+  color: #c6c6c6 !important;
+  caret-color: #c6c6c6 !important;
+}
+.v-application .accent.darken-3 {
+  background-color: #ababab !important;
+  border-color: #ababab !important;
+}
+.v-application .accent--text.text--darken-3 {
+  color: #ababab !important;
+  caret-color: #ababab !important;
+}
+.v-application .accent.darken-4 {
+  background-color: #919191 !important;
+  border-color: #919191 !important;
+}
+.v-application .accent--text.text--darken-4 {
+  color: #919191 !important;
+  caret-color: #919191 !important;
+}
+.v-application .error {
+  background-color: #ff5252 !important;
+  border-color: #ff5252 !important;
+}
+.v-application .error--text {
+  color: #ff5252 !important;
+  caret-color: #ff5252 !important;
+}
+.v-application .error.lighten-5 {
+  background-color: #ffe4d5 !important;
+  border-color: #ffe4d5 !important;
+}
+.v-application .error--text.text--lighten-5 {
+  color: #ffe4d5 !important;
+  caret-color: #ffe4d5 !important;
+}
+.v-application .error.lighten-4 {
+  background-color: #ffc6b9 !important;
+  border-color: #ffc6b9 !important;
+}
+.v-application .error--text.text--lighten-4 {
+  color: #ffc6b9 !important;
+  caret-color: #ffc6b9 !important;
+}
+.v-application .error.lighten-3 {
+  background-color: #ffa99e !important;
+  border-color: #ffa99e !important;
+}
+.v-application .error--text.text--lighten-3 {
+  color: #ffa99e !important;
+  caret-color: #ffa99e !important;
+}
+.v-application .error.lighten-2 {
+  background-color: #ff8c84 !important;
+  border-color: #ff8c84 !important;
+}
+.v-application .error--text.text--lighten-2 {
+  color: #ff8c84 !important;
+  caret-color: #ff8c84 !important;
+}
+.v-application .error.lighten-1 {
+  background-color: #ff6f6a !important;
+  border-color: #ff6f6a !important;
+}
+.v-application .error--text.text--lighten-1 {
+  color: #ff6f6a !important;
+  caret-color: #ff6f6a !important;
+}
+.v-application .error.darken-1 {
+  background-color: #df323b !important;
+  border-color: #df323b !important;
+}
+.v-application .error--text.text--darken-1 {
+  color: #df323b !important;
+  caret-color: #df323b !important;
+}
+.v-application .error.darken-2 {
+  background-color: #bf0025 !important;
+  border-color: #bf0025 !important;
+}
+.v-application .error--text.text--darken-2 {
+  color: #bf0025 !important;
+  caret-color: #bf0025 !important;
+}
+.v-application .error.darken-3 {
+  background-color: #9f0010 !important;
+  border-color: #9f0010 !important;
+}
+.v-application .error--text.text--darken-3 {
+  color: #9f0010 !important;
+  caret-color: #9f0010 !important;
+}
+.v-application .error.darken-4 {
+  background-color: #800000 !important;
+  border-color: #800000 !important;
+}
+.v-application .error--text.text--darken-4 {
+  color: #800000 !important;
+  caret-color: #800000 !important;
+}
+.v-application .info {
+  background-color: #2196f3 !important;
+  border-color: #2196f3 !important;
+}
+.v-application .info--text {
+  color: #2196f3 !important;
+  caret-color: #2196f3 !important;
+}
+.v-application .info.lighten-5 {
+  background-color: #d4ffff !important;
+  border-color: #d4ffff !important;
+}
+.v-application .info--text.text--lighten-5 {
+  color: #d4ffff !important;
+  caret-color: #d4ffff !important;
+}
+.v-application .info.lighten-4 {
+  background-color: #b5ffff !important;
+  border-color: #b5ffff !important;
+}
+.v-application .info--text.text--lighten-4 {
+  color: #b5ffff !important;
+  caret-color: #b5ffff !important;
+}
+.v-application .info.lighten-3 {
+  background-color: #95e8ff !important;
+  border-color: #95e8ff !important;
+}
+.v-application .info--text.text--lighten-3 {
+  color: #95e8ff !important;
+  caret-color: #95e8ff !important;
+}
+.v-application .info.lighten-2 {
+  background-color: #75ccff !important;
+  border-color: #75ccff !important;
+}
+.v-application .info--text.text--lighten-2 {
+  color: #75ccff !important;
+  caret-color: #75ccff !important;
+}
+.v-application .info.lighten-1 {
+  background-color: #51b0ff !important;
+  border-color: #51b0ff !important;
+}
+.v-application .info--text.text--lighten-1 {
+  color: #51b0ff !important;
+  caret-color: #51b0ff !important;
+}
+.v-application .info.darken-1 {
+  background-color: #007cd6 !important;
+  border-color: #007cd6 !important;
+}
+.v-application .info--text.text--darken-1 {
+  color: #007cd6 !important;
+  caret-color: #007cd6 !important;
+}
+.v-application .info.darken-2 {
+  background-color: #0064ba !important;
+  border-color: #0064ba !important;
+}
+.v-application .info--text.text--darken-2 {
+  color: #0064ba !important;
+  caret-color: #0064ba !important;
+}
+.v-application .info.darken-3 {
+  background-color: #004d9f !important;
+  border-color: #004d9f !important;
+}
+.v-application .info--text.text--darken-3 {
+  color: #004d9f !important;
+  caret-color: #004d9f !important;
+}
+.v-application .info.darken-4 {
+  background-color: #003784 !important;
+  border-color: #003784 !important;
+}
+.v-application .info--text.text--darken-4 {
+  color: #003784 !important;
+  caret-color: #003784 !important;
+}
+.v-application .success {
+  background-color: #4caf50 !important;
+  border-color: #4caf50 !important;
+}
+.v-application .success--text {
+  color: #4caf50 !important;
+  caret-color: #4caf50 !important;
+}
+.v-application .success.lighten-5 {
+  background-color: #dcffd6 !important;
+  border-color: #dcffd6 !important;
+}
+.v-application .success--text.text--lighten-5 {
+  color: #dcffd6 !important;
+  caret-color: #dcffd6 !important;
+}
+.v-application .success.lighten-4 {
+  background-color: #beffba !important;
+  border-color: #beffba !important;
+}
+.v-application .success--text.text--lighten-4 {
+  color: #beffba !important;
+  caret-color: #beffba !important;
+}
+.v-application .success.lighten-3 {
+  background-color: #a2ff9e !important;
+  border-color: #a2ff9e !important;
+}
+.v-application .success--text.text--lighten-3 {
+  color: #a2ff9e !important;
+  caret-color: #a2ff9e !important;
+}
+.v-application .success.lighten-2 {
+  background-color: #85e783 !important;
+  border-color: #85e783 !important;
+}
+.v-application .success--text.text--lighten-2 {
+  color: #85e783 !important;
+  caret-color: #85e783 !important;
+}
+.v-application .success.lighten-1 {
+  background-color: #69cb69 !important;
+  border-color: #69cb69 !important;
+}
+.v-application .success--text.text--lighten-1 {
+  color: #69cb69 !important;
+  caret-color: #69cb69 !important;
+}
+.v-application .success.darken-1 {
+  background-color: #2d9437 !important;
+  border-color: #2d9437 !important;
+}
+.v-application .success--text.text--darken-1 {
+  color: #2d9437 !important;
+  caret-color: #2d9437 !important;
+}
+.v-application .success.darken-2 {
+  background-color: #00791e !important;
+  border-color: #00791e !important;
+}
+.v-application .success--text.text--darken-2 {
+  color: #00791e !important;
+  caret-color: #00791e !important;
+}
+.v-application .success.darken-3 {
+  background-color: #006000 !important;
+  border-color: #006000 !important;
+}
+.v-application .success--text.text--darken-3 {
+  color: #006000 !important;
+  caret-color: #006000 !important;
+}
+.v-application .success.darken-4 {
+  background-color: #004700 !important;
+  border-color: #004700 !important;
+}
+.v-application .success--text.text--darken-4 {
+  color: #004700 !important;
+  caret-color: #004700 !important;
+}
+.v-application .warning {
+  background-color: #fb8c00 !important;
+  border-color: #fb8c00 !important;
+}
+.v-application .warning--text {
+  color: #fb8c00 !important;
+  caret-color: #fb8c00 !important;
+}
+.v-application .warning.lighten-5 {
+  background-color: #ffff9e !important;
+  border-color: #ffff9e !important;
+}
+.v-application .warning--text.text--lighten-5 {
+  color: #ffff9e !important;
+  caret-color: #ffff9e !important;
+}
+.v-application .warning.lighten-4 {
+  background-color: #fffb82 !important;
+  border-color: #fffb82 !important;
+}
+.v-application .warning--text.text--lighten-4 {
+  color: #fffb82 !important;
+  caret-color: #fffb82 !important;
+}
+.v-application .warning.lighten-3 {
+  background-color: #ffdf67 !important;
+  border-color: #ffdf67 !important;
+}
+.v-application .warning--text.text--lighten-3 {
+  color: #ffdf67 !important;
+  caret-color: #ffdf67 !important;
+}
+.v-application .warning.lighten-2 {
+  background-color: #ffc24b !important;
+  border-color: #ffc24b !important;
+}
+.v-application .warning--text.text--lighten-2 {
+  color: #ffc24b !important;
+  caret-color: #ffc24b !important;
+}
+.v-application .warning.lighten-1 {
+  background-color: #ffa72d !important;
+  border-color: #ffa72d !important;
+}
+.v-application .warning--text.text--lighten-1 {
+  color: #ffa72d !important;
+  caret-color: #ffa72d !important;
+}
+.v-application .warning.darken-1 {
+  background-color: #db7200 !important;
+  border-color: #db7200 !important;
+}
+.v-application .warning--text.text--darken-1 {
+  color: #db7200 !important;
+  caret-color: #db7200 !important;
+}
+.v-application .warning.darken-2 {
+  background-color: #bb5900 !important;
+  border-color: #bb5900 !important;
+}
+.v-application .warning--text.text--darken-2 {
+  color: #bb5900 !important;
+  caret-color: #bb5900 !important;
+}
+.v-application .warning.darken-3 {
+  background-color: #9d4000 !important;
+  border-color: #9d4000 !important;
+}
+.v-application .warning--text.text--darken-3 {
+  color: #9d4000 !important;
+  caret-color: #9d4000 !important;
+}
+.v-application .warning.darken-4 {
+  background-color: #802700 !important;
+  border-color: #802700 !important;
+}
+.v-application .warning--text.text--darken-4 {
+  color: #802700 !important;
+  caret-color: #802700 !important;
+}</style></head><body><noscript><strong>We're sorry but apex-tourney-frontend doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div class="app-wrap"><div class="app-wrap-overlay"></div><div class="app-wrap-overlay1"></div><svg id="canvas" viewBox="0 0 1280 750"><!----><image x="1235.7354566757087" y="510.38618522964464" width="21" href="/img/leaf2.webp"></image><image x="914.9147122975093" y="323.80966425167736" width="15" href="/img/leaf4.webp"></image><image x="456.59609006866054" y="660.6249123811178" width="33" href="/img/leaf4.webp"></image><image x="266.1294746341927" y="348.038012142621" width="21" href="/img/leaf1.webp"></image><image x="70.58214470556456" y="266.5329692362129" width="28" href="/img/leaf4.webp"></image><image x="38.889940622022266" y="398.3570634762974" width="23" href="/img/leaf4.webp"></image><image x="596.7809772001639" y="208.92076113872895" width="18" href="/img/leaf3.webp"></image><image x="633.248004050179" y="208.44656922239867" width="24" href="/img/leaf4.webp"></image><image x="605.5746509776092" y="700.9188407821797" width="15" href="/img/leaf4.webp"></image><image x="111.97588973460307" y="686.5345426197173" width="24" href="/img/leaf1.webp"></image><image x="1234.8800285198133" y="457.6035165244149" width="30" href="/img/leaf3.webp"></image><image x="75.17156480377379" y="317.9793719356879" width="33" href="/img/leaf1.webp"></image><image x="372.66951686175116" y="412.2253106020614" width="24" href="/img/leaf1.webp"></image><image x="391.7950516039229" y="129.18515013287774" width="21" href="/img/leaf4.webp"></image><image x="4.352314190398282" y="713.1067655399485" width="14" href="/img/leaf1.webp"></image><image x="916.5342739820921" y="709.2683159950069" width="23" href="/img/leaf1.webp"></image><image x="1030.6862181990996" y="650.4109564318942" width="15" href="/img/leaf1.webp"></image><image x="458.8553508781053" y="519.3973401898594" width="18" href="/img/leaf3.webp"></image><image x="529.1643591368288" y="653.5517657046944" width="16" href="/img/leaf2.webp"></image><image x="1074.8441691245391" y="526.3053298011904" width="17" href="/img/leaf2.webp"></image><image x="170.36802561336674" y="265.94589320168575" width="32" href="/img/leaf2.webp"></image><image x="1051.9470052286704" y="705.5646998994949" width="19" href="/img/leaf2.webp"></image><image x="47.4330261825018" y="370.0001423965254" width="30" href="/img/leaf1.webp"></image><image x="118.75646934834319" y="511.1572070514062" width="22" href="/img/leaf4.webp"></image><image x="369.0898685255196" y="710.2364386830005" width="17" href="/img/leaf4.webp"></image><image x="90.33216243807072" y="505.4964885259445" width="31" href="/img/leaf3.webp"></image><image x="757.7392521756282" y="290.5212319548028" width="27" href="/img/leaf1.webp"></image><image x="123.7620901550141" y="506.4199721782088" width="19" href="/img/leaf4.webp"></image><image x="213.18662184361267" y="229.01300174093004" width="27" href="/img/leaf2.webp"></image><image x="496.8174825294673" y="535.5855743492673" width="10" href="/img/leaf4.webp"></image><image x="324.2220363847119" y="473.3970654919549" width="18" href="/img/leaf4.webp"></image><image x="308.6295755274988" y="496.20438990326005" width="21" href="/img/leaf4.webp"></image><image x="-6.703522861697047" y="589.7097131484984" width="29" href="/img/leaf1.webp"></image><image x="645.4524333207404" y="707.0792271128272" width="12" href="/img/leaf2.webp"></image><image x="236.2703532842966" y="338.9163402508914" width="34" href="/img/leaf2.webp"></image><image x="366.04398135390346" y="699.8625043421422" width="22" href="/img/leaf3.webp"></image><image x="852.6289704915995" y="452.40147810136995" width="33" href="/img/leaf4.webp"></image><image x="930.8629896307499" y="649.4547291550981" width="19" href="/img/leaf3.webp"></image><image x="1199.2369772129177" y="702.5318415597899" width="22" href="/img/leaf2.webp"></image><image x="1029.1933380910878" y="294.3052786392533" width="24" href="/img/leaf3.webp"></image><image x="280.2698954770836" y="446.7286282578756" width="27" href="/img/leaf2.webp"></image><image x="112.1732234768457" y="636.6432052879474" width="30" href="/img/leaf2.webp"></image><image x="38.11694429044686" y="702.1057869392872" width="27" href="/img/leaf3.webp"></image><image x="187.03530050961436" y="605.2224068239273" width="26" href="/img/leaf1.webp"></image><image x="490.0547068346016" y="704.7632776395258" width="29" href="/img/leaf2.webp"></image><image x="1082.4230876028407" y="700.7268457650977" width="17" href="/img/leaf3.webp"></image><image x="952.4948996384495" y="219.0942753415691" width="11" href="/img/leaf1.webp"></image><image x="95.86931065550449" y="544.6266384394902" width="20" href="/img/leaf1.webp"></image><image x="137.2381605850826" y="547.8999709986098" width="18" href="/img/leaf1.webp"></image><image x="764.1407188710401" y="703.100214025051" width="26" href="/img/leaf3.webp"></image><image x="1023.8311741743285" y="413.3913931893948" width="19" href="/img/leaf1.webp"></image><image x="399.9465124959751" y="521.2123920516913" width="32" href="/img/leaf4.webp"></image><image x="184.47671710912903" y="485.20608588860364" width="11" href="/img/leaf3.webp"></image><image x="449.0715277498934" y="702.6913421849227" width="19" href="/img/leaf1.webp"></image><image x="698.0461938537786" y="651.79342231222" width="14" href="/img/leaf2.webp"></image><image x="461.9741021405985" y="601.8369393933292" width="15" href="/img/leaf3.webp"></image><image x="841.5481843209742" y="494.6295813762693" width="11" href="/img/leaf2.webp"></image><image x="590.502994874032" y="713.7483811584947" width="13" href="/img/leaf2.webp"></image><image x="470.1266517284129" y="359.13098703081897" width="34" href="/img/leaf4.webp"></image><image x="136.37388426801084" y="700.1842153432879" width="32" href="/img/leaf4.webp"></image><image x="639.7014483579222" y="104.91823497340019" width="26" href="/img/leaf2.webp"></image><image x="839.567696749268" y="695.0569140601966" width="32" href="/img/leaf3.webp"></image><image x="1161.2011053886206" y="700.481312554021" width="18" href="/img/leaf1.webp"></image><image x="68.56270917645176" y="651.0476445921021" width="23" href="/img/leaf3.webp"></image><image x="89.65132286032575" y="697.520045736789" width="29" href="/img/leaf1.webp"></image><image x="424.5012576286802" y="525.429434181" width="31" href="/img/leaf3.webp"></image><image x="739.7645996732148" y="649.3937704175992" width="12" href="/img/leaf2.webp"></image><image x="856.2421571207979" y="707.5869727865194" width="19" href="/img/leaf2.webp"></image><image x="986.8635216451557" y="596.6355909347863" width="30" href="/img/leaf3.webp"></image><image x="36.37198351662573" y="696.7225319780207" width="25" href="/img/leaf1.webp"></image><image x="697.1753086190793" y="697.2944851062001" width="22" href="/img/leaf2.webp"></image><image x="932.8457074350976" y="708.5715609406213" width="25" href="/img/leaf3.webp"></image><image x="104.13633225630247" y="505.5125440986824" width="28" href="/img/leaf1.webp"></image><image x="1056.1084524335627" y="705.5865094388843" width="20" href="/img/leaf2.webp"></image><image x="295.5145944656394" y="706.7784337556634" width="22" href="/img/leaf1.webp"></image><image x="488.7977981191388" y="227.14957894664482" width="29" href="/img/leaf1.webp"></image><image x="86.89486540854963" y="698.3623229910363" width="24" href="/img/leaf2.webp"></image><image x="1156.168130307376" y="693.7511027056242" width="28" href="/img/leaf3.webp"></image><image x="378.8141714096912" y="510.20248796802764" width="30" href="/img/leaf1.webp"></image><image x="488.8953776003059" y="429.27101016429265" width="10" href="/img/leaf1.webp"></image><image x="884.4136153587682" y="322.1623518025639" width="31" href="/img/leaf3.webp"></image><image x="306.61380143455835" y="161.69359553704325" width="23" href="/img/leaf2.webp"></image><image x="194.4143363612557" y="692.186658738081" width="28" href="/img/leaf1.webp"></image><image x="361.37726335588553" y="539.9963208346819" width="28" href="/img/leaf1.webp"></image><image x="504.65413991546575" y="205.23331023321168" width="23" href="/img/leaf3.webp"></image><image x="827.385159785517" y="303.48488074923006" width="21" href="/img/leaf2.webp"></image><image x="58.02726131287875" y="501.1496165892206" width="32" href="/img/leaf1.webp"></image><image x="788.9374460508619" y="455.8744661887734" width="17" href="/img/leaf4.webp"></image><image x="795.1315426935231" y="693.7362599806495" width="34" href="/img/leaf4.webp"></image><image x="785.4757146330771" y="386.7540958321057" width="30" href="/img/leaf2.webp"></image><image x="403.4537868801535" y="191.16552969448432" width="22" href="/img/leaf1.webp"></image><image x="892.4455228802532" y="69.07084639857656" width="19" href="/img/leaf4.webp"></image><image x="621.287914686361" y="271.54375601753276" width="33" href="/img/leaf1.webp"></image><image x="733.8425383364411" y="197.23750523985552" width="26" href="/img/leaf1.webp"></image><image x="678.7019231013313" y="263.00789175641887" width="20" href="/img/leaf4.webp"></image><image x="773.4167763262965" y="165.8989496443953" width="19" href="/img/leaf2.webp"></image><image x="179.75254484801334" y="150.7394500466083" width="18" href="/img/leaf1.webp"></image><image x="1177.1850638211492" y="139.9030994990198" width="18" href="/img/leaf2.webp"></image><image x="482.90354228545914" y="231.51005008559423" width="12" href="/img/leaf3.webp"></image><image x="1097.6964984225365" y="191.4450827434744" width="16" href="/img/leaf2.webp"></image><image x="811.1524550510692" y="45.27644613445746" width="14" href="/img/leaf1.webp"></image><image x="760.7370940023479" y="149.79645000058647" width="34" href="/img/leaf1.webp"></image><image x="296.6725962227032" y="37.30630296011707" width="31" href="/img/leaf2.webp"></image><image x="647.7620504003856" y="115.80670504053293" width="13" href="/img/leaf1.webp"></image><image x="593.5089847783577" y="37.234548413306435" width="21" href="/img/leaf3.webp"></image><image x="236.88154080221216" y="118.7236275929896" width="11" href="/img/leaf3.webp"></image><image x="15.128681608697796" y="54.21623554190997" width="21" href="/img/leaf2.webp"></image><image x="1083.1564242559953" y="76.12314408315257" width="26" href="/img/leaf4.webp"></image><image x="975.6735768750605" y="120.41655112355548" width="27" href="/img/leaf1.webp"></image><image x="120.89788620398576" y="70.65451207597496" width="24" href="/img/leaf4.webp"></image><image x="319.1362652215288" y="30.5623409333446" width="19" href="/img/leaf2.webp"></image><image x="902.4096362972892" y="28.999352739996873" width="24" href="/img/leaf2.webp"></image><image x="695.7164712906595" y="47.63825610329928" width="28" href="/img/leaf1.webp"></image><image x="213.2234482911848" y="32.13848531154159" width="11" href="/img/leaf4.webp"></image><image x="748.7691291643961" y="66.91895620563172" width="28" href="/img/leaf1.webp"></image><image x="697.0100143741128" y="16.580548412077214" width="34" href="/img/leaf2.webp"></image><image x="408.9828697457387" y="73.8703328205378" width="23" href="/img/leaf2.webp"></image><image x="477.5214460892554" y="28.918875003622446" width="27" href="/img/leaf4.webp"></image><image x="401.51697755342707" y="42.05148055419319" width="26" href="/img/leaf4.webp"></image><image x="919.6728827717975" y="17.181977805852668" width="21" href="/img/leaf4.webp"></image><image x="389.6520414377168" y="50.14423783113273" width="33" href="/img/leaf4.webp"></image><image x="821.0904556493261" y="32.69234344581957" width="25" href="/img/leaf2.webp"></image><image x="1038.5769616427015" y="22.323059076328875" width="29" href="/img/leaf1.webp"></image><image x="846.1627177509745" y="8.760013566027162" width="14" href="/img/leaf1.webp"></image><image x="-11.823246673531255" y="-7.641152902268404" width="30" href="/img/leaf4.webp"></image><image x="3.0089750015705476" y="-9.647765938890096" width="26" href="/img/leaf4.webp"></image><text x="0" y="0" text-anchor="middle" class="d-leaves-ranked" style="transition: all 0.8s ease 0s, transform 0.5s ease-out 0s, opacity 0.6s ease 0s; font-size: 16px; opacity: 0; text-shadow: rgba(255, 255, 255, 0.667) 0px 0px 16px;">Leaves Raked 888</text></svg><div data-v-672a2669="" data-app="true" class="v-application main-wrap v-application--is-ltr theme--dark" id="app" organizer="VESA League" game="overall"><div class="v-application--wrap"><div data-v-672a2669="" class="public-wrapper"><div data-v-336faa0b="" data-v-672a2669="" class="nav-container"><header data-v-336faa0b="" class="main-nav elevation-0"><div data-v-336faa0b="" class="toolbar-link-container"><a data-v-336faa0b="" href="/" class="toolbar-link router-link-active"><img data-v-336faa0b="" height="25" src="/img/overstat_logo.png" alt="logo" aria-label="Home"></a><a data-v-336faa0b="" href="/players" class="toolbar-link text" aria-label="search">Search</a><a data-v-336faa0b="" href="/map" class="toolbar-link text" aria-label="maps">Maps</a><a data-v-336faa0b="" href="/analytics" class="toolbar-link text" aria-label="analytics">Analytics</a><a data-v-336faa0b="" href="/ring-game" class="toolbar-link text" aria-label="ring-game">Ring Game </a><a data-v-336faa0b="" href="/aim" class="toolbar-link text hidden-xs-only" aria-label="ring-game">Aim Trainer</a></div><div data-v-336faa0b="" class="toolbar-right-container"><a data-v-336faa0b="" href="/admin" class="toolbar-link text">Organizer</a><div data-v-336faa0b="" class="v-menu"><!----></div><a data-v-336faa0b="" dark="" text="" role="button" aria-haspopup="true" aria-expanded="false" class="toolbar-link text"> Account </a></div></header></div><div data-v-672a2669="" class="page-header mt-5"><div data-v-672a2669="" class="page-title"><div data-v-672a2669=""></div><div data-v-672a2669="" class="page-sub-title"><a data-v-672a2669="" href="/" class="router-link-active"></a></div></div></div><div data-v-672a2669="" class="my-5 page-wrap"><div data-v-672a2669="" class="page-nav"><div data-v-672a2669="" class="link-container"><a data-v-672a2669="" href="/tournament/VESA%20League/_Bt8nT/standings" class="nav-link router-link-active">Standings</a><a data-v-672a2669="" href="/tournament/VESA%20League/_Bt8nT/stats" class="nav-link">Stats</a><!----><!----></div></div><div data-v-672a2669="" class="content-wrap"><div data-v-672a2669=""></div><div data-v-5624f7be="" data-v-672a2669="" class="overall-wrapper" match="[object Object]" organizer="VESA League" matchslug="_Bt8nT"><div data-v-5624f7be="" class="subnav"><a data-v-5624f7be="" href="/tournament/VESA%20League/_Bt8nT/standings/overall/scoreboard" class="subnav-link">Scoreboard</a><a data-v-5624f7be="" href="/tournament/VESA%20League/_Bt8nT/standings/overall/player-standings" aria-current="page" class="subnav-link router-link-exact-active router-link-active">Player Standings</a><a data-v-5624f7be="" href="/tournament/VESA%20League/_Bt8nT/standings/overall/team-standings" class="subnav-link">Team Standings</a><a data-v-5624f7be="" href="/tournament/VESA%20League/_Bt8nT/standings/overall/graphic" class="subnav-link">Graphic</a></div><!----></div></div></div></div><div data-v-672a2669=""><div class="container"></div><div class="credit">Created by <a target="_blank" href="https://twitter.com/Double0_">@Double0negative</a> | <a href="">Toggle Animation Off</a> | <a href="/RAKE-SOME-LEAVES-HECK-YEA" class="aa">Rake Some Leaves!</a></div></div></div></div></div></body></html>

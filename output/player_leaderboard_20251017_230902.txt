@@ -1,0 +1,165 @@
+================================================================================
+VESA LEAGUE - INDIVIDUAL PLAYER RANKINGS
+Generated: 2025-10-17 23:09:02
+================================================================================
+
+Multi-Season Weighted Ratings (S4-S12)
+Recency Bias: S12(28%), S11(24%), S8(18%), S6(14%), S5(10%), S4(6%)
+Top Lobby Bonus: 15% for elite division players
+
+================================================================================
+TOP 100 PLAYERS
+================================================================================
+Rank   Player                    Rating     Tier   Seasons         Bonus
+--------------------------------------------------------------------------------
+1      Lau                       253.90     S+     S, 1, 1, +, S,  
+2      CHUDMAXXING               227.89     S+     S, 1, 1, +, S,  
+3      BrodE                     224.03     S+     S, 1, 1, +, S,  
+4      lum                       214.84     S+     S, 1, 1, +, S,  
+5      Zboy5z5                   207.79     S+     S, 1, 1, +, S,  
+6      Anteatter                 207.17     S+     S, 1, 1         
+7      Bleachh                   203.07     S+     S, 1, 1, +, S,  
+8      Mysteryz                  197.18     S+     S, 1, 1, +, S,  
+9      NC Kahzïne                188.19     S+     S, 1, 1, +, S,  
+10     acb                       184.80     S+     S, 1, 1, +, S,  
+11     Dvpaper                   157.03     S      S, 1, 1, +, S,  
+12     BF Kaidostreams           155.19     S      S, 1, 1, +, S,  
+13     Stitch                    155.04     S      S, 1, 2, +, S,  
+14     Penguinii                 153.60     S      S, 1, 1, +, S,  
+15     0ptical                   151.16     S      S, 1, 1, +, S,  
+16     An7                       148.18     S      S, 1, 1, +, S,  
+17     Hova                      148.01     S      S, 1, 2, +, S,  
+18     Noxums                    147.56     S      S, 1, 1, +, S,  
+19     twitch.tv/kozmohs         145.86     S      S, 1, 1         
+20     Lastcall                  144.52     S      S, 1, 1, +, S,  
+21     Nopes Ropes               143.91     S      S, 1, 2, +, S,  
+22     Dare                      143.05     S      S, 1, 1         
+23     DarkApex                  140.00     A+     S, 1, 1, +, S,  
+24     zourafa12                 138.51     A+     S, 1, 2, +, S,  
+25     PureAqua | ExE?           138.39     A+     S, 1, 1, +, S,  
+26     Bvtterr                   138.18     A+     S, 1, 1, +, S,  
+27     TNL_Colt                  136.66     A+     S, 1, 1         
+28     Almanymede                136.29     A+     S, 1, 1, +, S,  
+29     cudi                      135.43     A+     S, 1, 1, +, S,  
+30     wattsonswittlepuppywoof   134.03     A+     S, 1, 1, +, S,  
+31     ejustice74                131.86     A+     S, 1, 2, +, S,  
+32     HA1L RG3                  128.96     A+     S, 1, 2, +, S,  
+33     ColedColedWorld           128.80     A+     S, 1, 2, +, S,  
+34     Shouli                    128.62     A+     S, 1, 1, +, S,  
+35     priiznn                   127.26     A+     S, 1, 1, +, S,  
+36     KindlyMonkey              125.04     A+     S, 1, 2, +, S,  
+37     Zimm                      124.41     A+     S, 1, 1, +, S,  
+38     @YoJokerz                 123.59     A+     S, 1, 1, +, S,  
+39     Zaphyツ                    123.55     A+     S, 1, 1         
+40     eidolon                   121.23     A+     S, 1, 1, +, S,  
+41     TheGunner2533             119.61     A      S, 1, 2, +, S,  
+42     Sleeping                  118.69     A      S, 1, 1, +, S,  
+43     Freak Newcastle           118.10     A      S, 1, 2, +, S,  
+44     spaceman                  116.41     A      S, 1, 1, +, S,  
+45     HaKobo                    115.99     A      S, 1, 2, +, S,  
+46     Kevin                     114.40     A      S, 1, 2, +, S,  
+47     Baughty                   113.35     A      S, 1, 2, +, S,  
+48     NØKK                      112.35     A      S, 1, 1, +, S,  
+49     OzWaldo                   111.70     A      S, 1, 1         
+50     wawzi                     107.96     A      S, 1, 1, +, S,  
+51     DH_Soda                   106.69     A      S, 1, 1, +, S,  
+52     twitch.tv/apguapo         105.06     A      S, 1, 2, +, S,  
+53     Karnivorrr                103.46     A      S, 1, 2, +, S,  
+54     unix._                    103.35     A      S, 1, 2, +, S,  
+55     ARI!                      103.00     A      S, 1, 1, +, S,  
+56     Mr_Hands_20               102.56     A      S, 5, +, S, 6,  
+57     Saaaber                   102.56     A      S, 1, 2, +, S,  
+58     LeaderOfTheBees           102.34     A      S, 1, 1         
+59     indigocross92             102.23     A      S, 1, 2, +, S,  
+60     BigBen                    101.98     A      S, 1, 2, +, S,  
+61     Omnipotene                101.71     A      S, 1, 1         
+62     kat                       101.44     A      S, 1, 2, +, S,  
+63     That Shark Bitch          101.18     A      S, 1, 2, +, S,  
+64     zCrackdown                100.73     A      S, 1, 1, +, S,  
+65     Todo_apex                 100.46     A      S, 1, 1         
+66     PZ1A                      100.25     A      S, 1, 2, +, S,  
+67     t                         100.13     A      S, 1, 2, +, S,  
+68     PureAqua | Ltto           99.48      B+     S, 1, 1, +, S,  
+69     Hawkeye2552               99.40      B+     S, 5, +, S, 6,  
+70     kraag                     98.54      B+     S, 1, 1, +, S,  
+71     ChefMike                  98.49      B+     S, 1, 2, +, S,  
+72     Eddy                      98.44      B+     S, 1, 1, +, S,  
+73     GRO gLow                  96.93      B+     S, 1, 2, +, S,  
+74     TwelveGage                96.69      B+     S, 1, 2, +, S,  
+75     maufctr                   96.37      B+     S, 1, 1, +, S,  
+76     bradyvision               95.84      B+     S, 1, 2, +, S,  
+77     VENGER_YT                 95.34      B+     S, 1, 2         
+78     goodlookingsean           95.07      B+     S, 1, 1, +, S,  
+79     SoleSky                   94.86      B+     S, 1, 2, +, S,  
+80     PGK                       94.66      B+     S, 1, 1, +, S,  
+81     AUTHOR                    94.58      B+     S, 5, +, S, 6,  
+82     caro                      94.00      B+     S, 1, 1, +, S,  
+83     ChosenSky                 93.28      B+     S, 1, 1, +, S,  
+84     F5 | Stabjackal TTV       92.77      B+     S, 1, 1, +, S,  
+85     shueisha                  92.24      B+     S, 1, 2, +, S,  
+86     xestefy_                  91.89      B+     S, 1, 2, +, S,  
+87     Hylandbound               91.43      B+     S, 5, +, S, 8   
+88     SMZ Dragonite             87.86      B+     S, 1, 2, +, S,  
+89     NuTTy                     87.74      B+     S, 1, 1, +, S,  
+90     AiymAPotato               87.04      B+     S, 1, 2, +, S,  
+91     Dusterbia                 87.04      B+     S, 1, 2, +, S,  
+92     DASLEDGEHAMMER            87.04      B+     S, 1, 1, +, S,  
+93     ImSh1ny                   85.24      B+     S, 1, 2, +, S,  
+94     Cezr                      84.93      B      S, 1, 2, +, S,  
+95     mIsTer_gAbRielLL          84.91      B      S, 1, 2, +, S,  
+96     StoneSpy946               84.24      B      S, 1, 2, +, S,  
+97     PZ2A                      83.80      B      S, 1, 1, +, S,  
+98     Graffix                   83.36      B      S, 1, 2, +, S,  
+99     Haki                      83.18      B      S, 1, 2, +, S,  
+100    TheCoolPanda_             82.51      B      S, 1, 2         
+
+================================================================================
+TIER DISTRIBUTION
+================================================================================
+Tier S+  (  10 players,   1.0%): 
+Tier S   (  12 players,   1.2%): 
+Tier A+  (  18 players,   1.9%): 
+Tier A   (  27 players,   2.8%): █
+Tier B+  (  26 players,   2.7%): █
+Tier B   (  43 players,   4.4%): ██
+Tier C+  (  41 players,   4.2%): ██
+Tier C   (  49 players,   5.1%): ██
+Tier C-  (  78 players,   8.1%): ████
+Tier D+  ( 113 players,  11.7%): █████
+Tier D   ( 158 players,  16.3%): ████████
+Tier D-  ( 393 players,  40.6%): ████████████████████
+
+================================================================================
+TOP 10 PLAYERS
+================================================================================
+
+1. Lau - 253.90
+   Tier S+ (Elite Pro) | Seasons: S, 1, 1, +, S, 1, 2, +, S, 4, +, S, 5, +, S, 6
+
+2. CHUDMAXXING - 227.89
+   Tier S+ (Elite Pro) | Seasons: S, 1, 1, +, S, 1, 2
+
+3. BrodE - 224.03
+   Tier S+ (Elite Pro) | Seasons: S, 1, 1, +, S, 1, 2
+
+4. lum - 214.84
+   Tier S+ (Elite Pro) | Seasons: S, 1, 1, +, S, 1, 2, +, S, 4, +, S, 5, +, S, 5
+
+5. Zboy5z5 - 207.79
+   Tier S+ (Elite Pro) | Seasons: S, 1, 1, +, S, 1, 2, +, S, 4, +, S, 5, +, S, 6
+
+6. Anteatter - 207.17
+   Tier S+ (Elite Pro) | Seasons: S, 1, 1
+
+7. Bleachh - 203.07
+   Tier S+ (Elite Pro) | Seasons: S, 1, 1, +, S, 1, 2
+
+8. Mysteryz - 197.18
+   Tier S+ (Elite Pro) | Seasons: S, 1, 1, +, S, 1, 2, +, S, 4, +, S, 5, +, S, 6
+
+9. NC Kahzïne - 188.19
+   Tier S+ (Elite Pro) | Seasons: S, 1, 1, +, S, 1, 2, +, S, 4, +, S, 5, +, S, 6
+
+10. acb - 184.80
+   Tier S+ (Elite Pro) | Seasons: S, 1, 1, +, S, 1, 2
+

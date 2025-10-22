@@ -1,0 +1,99 @@
+VESA League - Export Division Assignments to CSV
+======================================================================
+✅ Exported 137 team assignments to: output/division_assignments.csv
+
+======================================================================
+DIVISION SUMMARY REPORT
+======================================================================
+
+Division 1 (Thursday):
+  Teams: 20
+  Avg Rating: 142.32
+  Rating Range: 114.53 - 239.28
+  Top 3 Teams:
+    1. ONYX (239.28)
+    2. Greasy Boyz (231.24)
+    3. Spooky Buttcheeks (172.12)
+
+Division 2 (Wednesday):
+  Teams: 20
+  Avg Rating: 89.09
+  Rating Range: 79.81 - 108.28
+  Top 3 Teams:
+    1. Saga (108.28)
+    2. Eclipse (105.12)
+    3. Protato Force (104.25)
+
+Division 3 (Monday):
+  Teams: 20
+  Avg Rating: 71.20
+  Rating Range: 64.91 - 78.98
+  Top 3 Teams:
+    1. FCKU2 (78.98)
+    2. SCHIZOMANIACZ (77.40)
+    3. 4funski (76.72)
+
+Division 4 (Thursday):
+  Teams: 20
+  Avg Rating: 61.15
+  Rating Range: 55.70 - 76.91
+  Top 3 Teams:
+    1. TBD (76.91)
+    2. El Drip (65.74)
+    3. Outcasts (63.45)
+
+Division 5 (Monday):
+  Teams: 20
+  Avg Rating: 51.56
+  Rating Range: 45.54 - 63.72
+  Top 3 Teams:
+    1. Pink Pony Club (63.72)
+    2. OV-HO's (58.63)
+    3. The Wave (57.85)
+
+Division 6 (Wednesday):
+  Teams: 20
+  Avg Rating: 39.82
+  Rating Range: 31.59 - 58.64
+  Top 3 Teams:
+    1. PHOnomenal (58.64)
+    2. Hunting Chuds Bungus (54.61)
+    3. The Misfits (44.80)
+
+Division 7 (Monday):
+  Teams: 17
+  Avg Rating: 23.01
+  Rating Range: 5.45 - 43.05
+  Top 3 Teams:
+    1. Stargazers (43.05)
+    2. BaM (38.54)
+    3. LAM (36.85)
+
+======================================================================
+⚠️  UNPLACED TEAMS - MANUAL REVIEW NEEDED
+======================================================================
+
+Team: New Alliance
+  Rating: 91.67
+  Tier: B+
+  Schedule Constraint: Monday, Wednesday, Thursday
+  Compatible Divisions: NONE
+  ⚠️  This team cannot play on any of the scheduled days (Mon/Wed/Thu)
+
+Team: Ardor Impact
+  Rating: 19.39
+  Tier: D-
+  Schedule Constraint: Monday, Wednesday
+  Compatible Divisions: [1, 4]
+  ⚠️  This team cannot play on any of the scheduled days (Mon/Wed/Thu)
+
+Team: Karasuno
+  Rating: 15.90
+  Tier: D-
+  Schedule Constraint: Monday
+  Compatible Divisions: [1, 2, 4, 6]
+  ⚠️  This team cannot play on any of the scheduled days (Mon/Wed/Thu)
+
+======================================================================
+Total: 137/140 teams placed
+======================================================================

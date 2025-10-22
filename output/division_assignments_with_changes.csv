@@ -1,0 +1,141 @@
+Overall_Rank,Division,Rank_in_Division,Team_Name,Team_Rating,Tier,Day,Schedule_Constraint,Original_Rank,Rank_Change,Change_Direction
+1,1,1,X-ELEMENT,33029.12,S+,Thursday,No Scheduling Issues,17,16,↑16
+2,1,2,Spooky Buttcheeks,23012.93,S+,Thursday,No Scheduling Issues,1,-1,↓1
+3,1,3,Greasy Boyz,18965.22,S+,Thursday,No Scheduling Issues,11,8,↑8
+4,1,4,Necrotic,15132.97,S+,Thursday,No Scheduling Issues,15,11,↑11
+5,1,5,ONYX,14980.18,S+,Thursday,No Scheduling Issues,3,-2,↓2
+6,1,6,Sword,13893.90,S+,Thursday,No Scheduling Issues,4,-2,↓2
+7,1,7,happy2behere,13442.87,S+,Thursday,No Scheduling Issues,25,18,↑18
+8,1,8,Xzile Esports,13252.20,S+,Thursday,No Scheduling Issues,7,-1,↓1
+9,1,9,Plus Ultra,12705.35,S+,Thursday,No Scheduling Issues,20,11,↑11
+10,1,10,100L X hakistat.com,12680.73,S+,Thursday,Wednesday,5,-5,↓5
+11,1,11,ThirdPartyKings,12486.30,S+,Thursday,No Scheduling Issues,14,3,↑3
+12,1,12,Eclipse,11640.08,S+,Thursday,Monday,18,6,↑6
+13,1,13,TBD,11532.83,S+,Thursday,Monday,16,3,↑3
+14,1,14,Renaissance,11451.15,S+,Thursday,Wednesday,6,-8,↓8
+15,1,15,OHH GUARDIAN,10890.70,S+,Thursday,No Scheduling Issues,27,12,↑12
+16,1,16,Fools Gold,9563.97,S+,Thursday,No Scheduling Issues,13,-3,↓3
+17,1,17,Dark Horse Esports,9349.07,S+,Thursday,No Scheduling Issues,26,9,↑9
+18,1,18,Saga,8493.73,S+,Thursday,No Scheduling Issues,8,-10,↓10
+19,1,19,ByFire,8420.38,S+,Thursday,No Scheduling Issues,2,-17,↓17
+20,1,20,Silly Little Chocobo's,8049.81,S+,Thursday,No Scheduling Issues,23,3,↑3
+21,2,1,Icarus,7890.45,S+,Wednesday,No Scheduling Issues,34,13,↑13
+22,2,2,PureAqua,7817.75,S+,Wednesday,No Scheduling Issues,29,7,↑7
+23,2,3,Focus,7082.19,S+,Wednesday,No Scheduling Issues,28,5,↑5
+24,2,4,New Alliance,6349.99,S+,Wednesday,"Monday, Wednesday, Thursday",22,-2,↓2
+25,2,5,Hectic City,6258.21,S+,Wednesday,No Scheduling Issues,12,-13,↓13
+26,2,6,norf norf,6235.80,S+,Wednesday,No Scheduling Issues,31,5,↑5
+27,2,7,Outcasts,5770.71,S+,Wednesday,Monday,38,11,↑11
+28,2,8,HRD,5567.03,S+,Wednesday,No Scheduling Issues,24,-4,↓4
+29,2,9,Nightmare Collective,5439.32,S+,Wednesday,Monday,21,-8,↓8
+30,2,10,FCK,5415.06,S+,Wednesday,No Scheduling Issues,10,-20,↓20
+31,2,11,SHORK,4943.59,S+,Wednesday,No Scheduling Issues,9,-22,↓22
+32,2,12,WannaBees,4734.10,S+,Wednesday,No Scheduling Issues,33,1,↑1
+33,2,13,3 Hearts Smile,4494.61,S+,Wednesday,No Scheduling Issues,43,10,↑10
+34,2,14,Los Pollos Hermanos,4208.46,S+,Wednesday,Monday,39,5,↑5
+35,2,15,GRIZZLY,3636.22,S+,Wednesday,No Scheduling Issues,37,2,↑2
+36,2,16,Bee Happy,3566.17,S+,Wednesday,,44,8,↑8
+37,2,17,Temple University,3539.28,S+,Wednesday,No Scheduling Issues,53,16,↑16
+38,2,18,Protato Force,3347.26,S+,Wednesday,No Scheduling Issues,36,-2,↓2
+39,2,19,Wiggs ball sweat,2781.75,S+,Wednesday,Thursday,41,2,↑2
+40,2,20,DNT,2717.28,S+,Wednesday,Monday,40,0,=
+41,3,1,LAM,2642.64,S+,Monday,Wednesday,49,8,↑8
+42,3,2,66TH ORDER OF MOTL,2501.64,S+,Monday,No Scheduling Issues,47,5,↑5
+43,3,3,Kissing Your Dads Toes,2442.60,S+,Monday,No Scheduling Issues,30,-13,↓13
+44,3,4,2 Mice 1 Rat,2413.75,S+,Monday,No Scheduling Issues,46,2,↑2
+45,3,5,Seven Deuce,2401.17,S+,Monday,No Scheduling Issues,42,-3,↓3
+46,3,6,Torchers,2011.26,S+,Monday,,45,-1,↓1
+47,3,7,El Drip,1679.97,S+,Monday,"Monday, Wednesday",51,4,↑4
+48,3,8,BoysNightOut,1665.65,S+,Monday,Wednesday,95,47,↑47
+49,3,9,OV-HO's,1645.43,S+,Monday,"Thursday, No Scheduling Issues",110,61,↑61
+50,3,10,Wallie Warriors,1549.42,S+,Monday,No Scheduling Issues,65,15,↑15
+51,3,11,4funski,1421.15,S+,Monday,No Scheduling Issues,19,-32,↓32
+52,3,12,Gaming Uncles,1276.14,S+,Monday,No Scheduling Issues,50,-2,↓2
+53,3,13,Triple Threat,1243.27,S+,Monday,Thursday,35,-18,↓18
+54,3,14,Diamond Dawgs,1241.97,S+,Monday,Monday,73,19,↑19
+55,3,15,Frozen Powerade,1227.26,S+,Monday,No Scheduling Issues,48,-7,↓7
+56,3,16,T2G Esports,1195.28,S+,Monday,Wednesday,79,23,↑23
+57,3,17,Team Hibiscus,1192.57,S+,Monday,No Scheduling Issues,67,10,↑10
+58,3,18,Concrete Jungle,1114.80,S+,Monday,No Scheduling Issues,66,8,↑8
+59,3,19,i see how it is,1032.35,S+,Monday,No Scheduling Issues,64,5,↑5
+60,3,20,Tsunami Pissers,1030.93,S+,Monday,No Scheduling Issues,56,-4,↓4
+61,4,1,8th Gate,1014.08,S+,Thursday,No Scheduling Issues,55,-6,↓6
+62,4,2,Pink Pony Club,988.32,S+,Thursday,Thursday,57,-5,↓5
+63,4,3,Solstice,983.45,S+,Thursday,No Scheduling Issues,32,-31,↓31
+64,4,4,Straw Hats,966.45,S+,Thursday,No Scheduling Issues,62,-2,↓2
+65,4,5,The Royal Knights,911.71,S+,Thursday,No Scheduling Issues,52,-13,↓13
+66,4,6,Last Place Secured,680.61,S+,Thursday,No Scheduling Issues,58,-8,↓8
+67,4,7,Ho Ho Headshots,651.70,S+,Thursday,No Scheduling Issues,54,-13,↓13
+68,4,8,Fearnotz,582.33,S+,Thursday,No Scheduling Issues,60,-8,↓8
+69,4,9,Waffle Cone,569.66,S+,Thursday,No Scheduling Issues,70,1,↑1
+70,4,10,Jedi Mind Tricks,517.59,S+,Thursday,,59,-11,↓11
+71,4,11,NESSIES FOR YOU,487.84,S+,Thursday,No Scheduling Issues,63,-8,↓8
+72,4,12,Stargazers,462.23,S+,Thursday,Wednesday,71,-1,↓1
+73,4,13,Casual Gooning,445.90,S+,Thursday,No Scheduling Issues,77,4,↑4
+74,4,14,Ardor Impact,400.77,S+,Thursday,"Monday, Wednesday",74,0,=
+75,4,15,Kirkland Signature Esports,382.44,S+,Thursday,No Scheduling Issues,75,0,=
+76,4,16,The Cult,337.74,S+,Thursday,No Scheduling Issues,96,20,↑20
+77,4,17,Dino Nugs,325.00,S+,Thursday,No Scheduling Issues,82,5,↑5
+78,4,18,LNC,306.83,S+,Thursday,No Scheduling Issues,84,6,↑6
+79,4,19,Paradox Gaming,292.51,S+,Thursday,No Scheduling Issues,86,7,↑7
+80,4,20,Fearsome Foursome,289.65,S+,Thursday,No Scheduling Issues,68,-12,↓12
+81,5,1,NordikSyncUniverse,266.61,S+,Monday,Wednesday,69,-12,↓12
+82,5,2,Apex Tee-Ball Team #1,256.94,S+,Monday,No Scheduling Issues,99,17,↑17
+83,5,3,Crashing Out,213.13,S+,Monday,No Scheduling Issues,123,40,↑40
+84,5,4,No Peel,207.48,S+,Monday,No Scheduling Issues,90,6,↑6
+85,5,5,PHOnomenal,205.04,S+,Monday,"Monday, Thursday",87,2,↑2
+86,5,6,MeeHoyyMinoyy,202.87,S+,Monday,No Scheduling Issues,72,-14,↓14
+87,5,7,Est Mango Mafia,183.97,S+,Monday,Thursday,88,1,↑1
+88,5,8,Reales,178.94,S+,Monday,No Scheduling Issues,83,-5,↓5
+89,5,9,Baked Goods,156.09,S+,Monday,No Scheduling Issues,98,9,↑9
+90,5,10,Maet Xepa,155.07,S+,Monday,No Scheduling Issues,108,18,↑18
+91,5,11,Hangin' Brain,154.58,S+,Monday,No Scheduling Issues,89,-2,↓2
+92,5,12,Thought it was safe,149.12,S+,Monday,No Scheduling Issues,92,0,=
+93,5,13,Yams in Paris,147.98,S+,Monday,No Scheduling Issues,112,19,↑19
+94,5,14,BaM,145.90,S+,Monday,"Wednesday, Thursday",85,-9,↓9
+95,5,15,Sakura,143.73,S,Monday,No Scheduling Issues,94,-1,↓1
+96,5,16,Cleveland Forge,143.08,S,Monday,No Scheduling Issues,80,-16,↓16
+97,5,17,Cream Team,141.66,S,Monday,Thursday,81,-16,↓16
+98,5,18,Karnage,140.20,S,Monday,No Scheduling Issues,78,-20,↓20
+99,5,19,Wagon station,126.84,A+,Monday,No Scheduling Issues,103,4,↑4
+100,5,20,Powerpuff Girls,126.64,A+,Monday,No Scheduling Issues,113,13,↑13
+101,6,1,Hunting Chuds Bungus,111.94,A,Wednesday,Monday,104,3,↑3
+102,6,2,The Yacht Motel,108.40,A,Wednesday,Thursday,101,-1,↓1
+103,6,3,FCKU2,106.71,A,Wednesday,No Scheduling Issues,93,-10,↓10
+104,6,4,OMPA,103.55,A,Wednesday,No Scheduling Issues,76,-28,↓28
+105,6,5,For The Boys,101.97,A,Wednesday,Thursday,115,10,↑10
+106,6,6,Cartel,95.24,B+,Wednesday,No Scheduling Issues,102,-4,↓4
+107,6,7,Gravity,85.16,B,Wednesday,No Scheduling Issues,114,7,↑7
+108,6,8,Brownies,80.14,B,Wednesday,Monday,111,3,↑3
+109,6,9,Bandit Beaters,80.00,B,Wednesday,No Scheduling Issues,61,-48,↓48
+110,6,10,Turbo Shandy,79.70,B,Wednesday,No Scheduling Issues,130,20,↑20
+111,6,11,Rabid,73.07,C+,Wednesday,No Scheduling Issues,100,-11,↓11
+112,6,12,Revive and Repeat,70.44,C+,Wednesday,No Scheduling Issues,109,-3,↓3
+113,6,13,Purple Cobras,70.14,C+,Wednesday,No Scheduling Issues,118,5,↑5
+114,6,14,DucK1ng Loko,67.59,C+,Wednesday,Thursday,106,-8,↓8
+115,6,15,Moirai Esports,67.41,C+,Wednesday,No Scheduling Issues,128,13,↑13
+116,6,16,Pekotitlan,66.99,C+,Wednesday,No Scheduling Issues,120,4,↑4
+117,6,17,TGUN,66.15,C+,Wednesday,No Scheduling Issues,117,0,=
+118,6,18,FALN Esports,64.42,C,Wednesday,No Scheduling Issues,116,-2,↓2
+119,6,19,Mike's Chill Summer,64.24,C,Wednesday,"Wednesday, No Scheduling Issues",105,-14,↓14
+120,6,20,Tiny Timmys,63.86,C,Wednesday,Wednesday,91,-29,↓29
+121,7,1,Feint,63.39,C,Monday,No Scheduling Issues,122,1,↑1
+122,7,2,Beaver Blasters,61.43,C,Monday,No Scheduling Issues,129,7,↑7
+123,7,3,Geriatric Reflexes,60.42,C,Monday,No Scheduling Issues,124,1,↑1
+124,7,4,Strike X,57.85,C,Monday,No Scheduling Issues,131,7,↑7
+125,7,5,Loser Gang,55.38,C,Monday,No Scheduling Issues,119,-6,↓6
+126,7,6,The Wave,54.52,C-,Monday,Thursday,97,-29,↓29
+127,7,7,Motion,52.97,C-,Monday,No Scheduling Issues,107,-20,↓20
+128,7,8,The Backyard,40.00,D+,Monday,No Scheduling Issues,132,4,↑4
+129,7,9,Karasuno,39.38,D+,Monday,Monday,135,6,↑6
+130,7,10,The Misfits,36.61,D+,Monday,No Scheduling Issues,133,3,↑3
+131,7,11,SCHIZOMANIACZ,35.70,D+,Monday,No Scheduling Issues,139,8,↑8
+132,7,12,High Tide Ladies,35.30,D+,Monday,"Wednesday, Thursday",138,6,↑6
+133,7,13,THR333 AMIGOS,33.12,D,Monday,No Scheduling Issues,134,1,↑1
+134,7,14,MOTL CONSOLE,28.04,D,Monday,Wednesday,127,-7,↓7
+135,7,15,The BooBees,24.64,D-,Monday,No Scheduling Issues,136,1,↑1
+136,7,16,GOM Squad,24.22,D-,Monday,No Scheduling Issues,137,1,↑1
+137,7,17,Delirium,21.14,D-,Monday,Mondays,121,-16,↓16
+138,7,18,Chill guys,16.90,D-,Monday,No Scheduling Issues,126,-12,↓12
+139,7,19,Spawned,16.79,D-,Monday,Wednesday,125,-14,↓14
+140,7,20,Apexolotls,15.75,D-,Monday,No Scheduling Issues,140,0,=

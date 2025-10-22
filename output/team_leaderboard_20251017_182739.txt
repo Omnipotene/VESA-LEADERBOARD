@@ -1,0 +1,210 @@
+==========================================================================================
+VESA LEAGUE - TEAM RANKINGS (SEASON 12)
+Generated: 2025-10-17 18:27:39
+==========================================================================================
+
+Team ratings based on aggregate player performance (S4-S12)
+Recency Bias: S12(28%), S11(24%), S8(18%), S6(14%), S5(10%), S4(6%)
+Top Lobby Bonus: 15% for players in elite divisions
+
+==========================================================================================
+TOP 50 TEAMS
+==========================================================================================
+Rank   Team Name                      Rating     Tier   Players Found
+------------------------------------------------------------------------------------------
+1      Greasy Boyz                    148.17     S+     3/3
+2      Spooky Buttcheeks              142.02     S      3/3
+3      ONYX                           127.85     A+     3/3
+4      Kissing Your Dads Toes         125.50     A+     3/3
+5      Crashing Out                   124.55     A+     2/3
+6      ByFire                         110.03     A      3/3
+7      Silly Little Chocobo's         109.87     A      3/3
+8      Karnage                        109.54     A      3/3
+9      FCK                            104.11     A      3/3
+10     Necrotic                       102.88     A      2/3
+11     Frozen Powerade                102.13     A      3/3
+12     The Cult                       90.13      B+     2/3
+13     Nightmare Collective           90.10      B+     2/3
+14     Hectic City                    90.02      B+     1/3
+15     Saga                           88.67      B      3/3
+16     Sword                          86.94      B      2/3
+17     Yams in Paris                  84.34      B      3/3
+18     No Peel                        84.15      B      3/3
+19     Protato Force                  83.79      B      2/3
+20     PureAqua                       82.87      B      1/3
+21     Eclipse                        82.32      B      2/3
+22     Fools Gold                     81.08      B      3/3
+23     SCHIZOMANIACZ                  80.33      B      1/3
+24     100L X hakistat.com            80.06      B      1/3
+25     Bee Happy                      80.00      B      0/3
+26     Bandit Beaters                 80.00      B      0/3
+27     Tsunami Pissers                80.00      B      0/3
+28     Paradox Gaming                 80.00      B      0/3
+29     Hangin' Brain                  80.00      B      0/3
+30     Genesis                        80.00      B      0/3
+31     ABGs                           80.00      B      0/3
+32     Around The World               80.00      B      0/3
+33     Daddys LiL egirls              80.00      B      0/3
+34     Core 3                         80.00      B      0/3
+35     Emptyy                         80.00      B      0/3
+36     KNT                            80.00      B      0/3
+37     DNT                            78.46      B      2/3
+38     Kirkland Signature Esports     78.18      B      3/3
+39     ThirdPartyKings                77.73      B      3/3
+40     Waffle Cone                    76.54      B      3/3
+41     Diamond Dawgs                  73.03      C+     3/3
+42     Team Hibiscus                  72.50      C+     1/3
+43     Torchers                       72.39      C+     1/3
+44     Concrete Jungle                71.92      C+     3/3
+45     Dark Horse Esports             71.62      C+     3/3
+46     Seven Deuce                    69.41      C+     1/3
+47     Pink Pony Club                 68.73      C+     3/3
+48     happy2behere                   68.19      C+     3/3
+49     Fearsome Foursome              67.86      C+     2/3
+50     OMPA                           67.77      C+     1/3
+
+==========================================================================================
+TIER DISTRIBUTION
+==========================================================================================
+Tier S+  (   1 teams,   0.6%): 
+Tier S   (   1 teams,   0.6%): 
+Tier A+  (   3 teams,   1.9%): 
+Tier A   (   6 teams,   3.8%): █
+Tier B+  (   3 teams,   1.9%): 
+Tier B   (  26 teams,  16.7%): ████████
+Tier C+  (  14 teams,   9.0%): ████
+Tier C   (  22 teams,  14.1%): ███████
+Tier C-  (  22 teams,  14.1%): ███████
+Tier D+  (  15 teams,   9.6%): ████
+Tier D   (  18 teams,  11.5%): █████
+Tier D-  (  25 teams,  16.0%): ████████
+
+==========================================================================================
+TOP 20 TEAMS - FULL ROSTERS
+==========================================================================================
+
+1. Greasy Boyz - 148.17 (Tier S+)
+   • Zboy5z5: 185.05
+   • BrodE: 154.18
+   • Bvtterr: 105.28
+
+2. Spooky Buttcheeks - 142.02 (Tier S)
+   • Lau: 189.68
+   • Mysteryz: 153.59
+   • Tragic: 82.79 (matched via alias)
+
+3. ONYX - 127.85 (Tier A+)
+   • super sub lumdum: 179.79 (matched via alias)
+   • SoaR Lumi: 179.72 (matched via alias)
+   • babylight: 24.05 (matched via alias)
+
+4. Kissing Your Dads Toes - 125.50 (Tier A+)
+   • Nopes Ropes: 120.83
+   • ColedColedWorld: 127.04
+   • ejustice74: 128.65
+
+5. Crashing Out - 124.55 (Tier A+)
+   • Muchmixture9: 146.82 (matched via alias)
+   • Hobojo: 146.82 (matched via alias)
+   • Shape Generator: 80.00
+
+6. ByFire - 110.03 (Tier A)
+   • Seeby: 147.02 (matched via alias)
+   • Kaido: 134.22 (matched via alias)
+   • Durxy: 48.87 (matched via alias)
+
+7. Silly Little Chocobo's - 109.87 (Tier A)
+   • Sleeping: 111.74
+   • Penguinii: 138.58
+   • dasledgehammer: 79.28
+
+8. Karnage - 109.54 (Tier A)
+   • Karnivorrr: 97.58
+   • TheGunner2533: 112.12
+   • HA1L RG3: 118.92
+
+9. FCK - 104.11 (Tier A)
+   • Lastcall: 134.36
+   • Shouli: 102.05
+   • PGK: 75.92
+
+10. Necrotic - 102.88 (Tier A)
+   • 0ptical: 108.61 (not found - default rating)
+   • Nutty_fps: 80.00 (matched via alias)
+   • Cudi_fps: 120.04
+
+11. Frozen Powerade - 102.13 (Tier A)
+   • AriFGC: 88.99 (matched via alias)
+   • DarkApex: 115.25
+   • ¿SABER?: 102.15 (matched via alias)
+
+12. The Cult - 90.13 (Tier B+)
+   • zourafa12: 123.50 (not found - default rating)
+   • Indigo: 80.00
+   • laceycs: 66.90
+
+13. Nightmare Collective - 90.10 (Tier B+)
+   • MOTL Kahzine: 160.09 (matched via alias)
+   • LFT-LostHope: 80.00
+   • rRekra: 30.21
+
+14. Hectic City - 90.02 (Tier B+)
+   • Dvpaper: 110.06 (not found - default rating)
+   • ryujii.x: 80.00 (not found - default rating)
+   • agtoop: 80.00
+
+15. Saga - 88.67 (Tier B)
+   • Truth: 51.85
+   • caro: 70.94
+   • Noxums: 143.21
+
+16. Sword - 86.94 (Tier B)
+   • compliant: 20.40 (matched via alias)
+   • 5dchar: 80.00 (matched via alias)
+   • BleachhFPS: 160.42
+
+17. Yams in Paris - 84.34 (Tier B)
+   • Hova: 126.12
+   • goddamnironman: 68.26
+   • Coveted Yams: 58.62
+
+18. No Peel - 84.15 (Tier B)
+   • HaKobo: 105.43
+   • baughty: 100.11
+   • GGMantisToboggan: 46.90
+
+19. Protato Force - 83.79 (Tier B)
+   • AiymAPotato: 85.68 (not found - default rating)
+   • dusterbia: 85.68
+   • thinkso: 80.00
+
+20. PureAqua - 82.87 (Tier B)
+   • 100T ltto.: 88.60 (matched via alias)
+   • Flaco: 80.00 (not found - default rating)
+   • Nokk: 80.00
+
+==========================================================================================
+S12 DIVISION PLACEMENTS
+==========================================================================================
+
+Division 1 (Thursday): 20 teams, Avg Rating: 104.38
+  Top 3: Greasy Boyz (148.2), Spooky Buttcheeks (142.0), ONYX (127.9)
+
+Division 2 (Wednesday): 20 teams, Avg Rating: 76.12
+  Top 3: Eclipse (82.3), Fools Gold (81.1), SCHIZOMANIACZ (80.3)
+
+Division 3 (Monday): 20 teams, Avg Rating: 63.55
+  Top 3: 100L X hakistat.com (80.1), Fearsome Foursome (67.9), OMPA (67.8)
+
+Division 4 (Thursday): 20 teams, Avg Rating: 53.44
+  Top 3: Renaissance (56.8), 8th Gate (56.7), 2 Mice 1 Rat (55.7)
+
+Division 5 (Monday): 20 teams, Avg Rating: 42.41
+  Top 3: The Wave (57.6), OV-HO's (56.4), Est Mango Mafia (50.4)
+
+Division 6 (Wednesday): 20 teams, Avg Rating: 29.20
+  Top 3: PHOnomenal (44.3), Outcasts (40.4), Hunting Chuds Bungus (33.9)
+
+Division 7 (Monday): 16 teams, Avg Rating: 14.38
+  Top 3: MOTL CONSOLE (28.7), i see how it is (21.0), High Tide Ladies (20.1)
+

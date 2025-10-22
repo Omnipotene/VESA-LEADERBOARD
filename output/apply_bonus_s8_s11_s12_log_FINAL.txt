@@ -1,0 +1,52 @@
+Applying Division Consistency Bonus to Multi-Season Player Ratings
+======================================================================
+Loaded division history for 607 players
+Loaded 675 player ratings
+
+Consistency Bonus Tiers:
+  35% - Avg division score 9-10 (Pinnacle I consistent)
+  15% - Avg division score 7-8.9 (Mostly top-tier)
+  10% - Avg division score 5-6.9 (Mid-tier)
+  5%  - Avg division score 3-4.9 (Lower-mid)
+  0%  - Avg division score <3
+
+Consistency Bonus Distribution:
+  35% bonus: 74 players (Pinnacle I consistent)
+  15% bonus: 94 players (Mostly top-tier)
+  10% bonus: 211 players (Mid-tier)
+  5% bonus:  227 players (Lower-mid)
+  0% bonus:  0 players (No division data)
+
+Total players with bonuses: 606
+
+TOP 20 PLAYERS (with consistency bonus applied):
+------------------------------------------------------------------------------------------
+Rank  Player                       Rating     Seasons       Bonus  Div Score
+------------------------------------------------------------------------------------------
+1     Anteatter                    407.86     S11           35%    10.0
+2     CHUDMAXXING                  389.25     S11+S12       35%    9.0
+3     Bleachh                      346.62     S11+S12       35%    9.0
+4     BrodE                        325.29     S11+S12       35%    10.0
+5     acb                          314.80     S11+S12       35%    9.0
+6     lum                          292.11     S11+S12       35%    9.0
+7     twitch.tv/kozmohs            287.16     S11           35%    10.0
+8     TNL_Colt                     269.04     S11           35%    10.0
+9     Lau                          266.34     S11+S12       35%    10.0
+10    Zaphyツ                       243.24     S11           35%    10.0
+11    spaceman                     234.77     S11+S12       35%    9.0
+12    NC Kahzïne                   233.73     S11+S12       35%    9.0
+13    Dare                         229.48     S11           10%    6.0
+14    Zboy5z5                      222.32     S11+S12       35%    10.0
+15    OzWaldo                      219.90     S11           35%    10.0
+16    DarkApex                     212.27     S11+S12       15%    8.0
+17    eidolon                      206.16     S11+S12       35%    9.0
+18    LeaderOfTheBees              201.47     S11           35%    10.0
+19    PureAqua | ExE?              198.16     S11+S12+S8    15%    8.0
+20    Todo_apex                    197.79     S11           35%    10.0
+
+✅ Saved updated ratings to: output/combined_all_seasons_ratings_with_bonus.json
+
+Next steps:
+  1. python3 team_seeding_combined.py
+  2. python3 division_seeding.py
+  3. python3 export_division_assignments.py

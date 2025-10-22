@@ -1,0 +1,565 @@
+<!DOCTYPE html><html lang="en"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-DZP7G2NV5X"></script><script>window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DZP7G2NV5X');</script><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.png"><meta property="og:title" content="Overstat.GG"><meta property="og:type" content="website"><meta property="og:image" content="/favicon.png"><meta property="og:description" content="Overstat.GG -- Apex Tournament Tools"><meta name="theme-color" content="#FF0000"><meta name="twitter:card" content="summary_large_image"><title>Overstat.GG</title><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;display=swap"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;300&amp;display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;900&amp;display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap"><meta name="description" content="Overstat.GG -- Apex Tournament Tools"><script defer="defer" src="/js/chunk-vendors.c554ba7e.js"></script><script defer="defer" src="/js/app.d2c2ef46.js"></script><link href="/css/chunk-vendors.268e784f.css" rel="stylesheet"><link href="/css/app.5f2e3b12.css" rel="stylesheet"><link rel="stylesheet" type="text/css" href="/css/8357.a16394e4.css"><link rel="stylesheet" type="text/css" href="/css/5599.40e38878.css"><style type="text/css" id="vuetify-theme-stylesheet">.v-application a { color: #793706; }
+.v-application .primary {
+  background-color: #793706 !important;
+  border-color: #793706 !important;
+}
+.v-application .primary--text {
+  color: #793706 !important;
+  caret-color: #793706 !important;
+}
+.v-application .primary.lighten-5 {
+  background-color: #ffb681 !important;
+  border-color: #ffb681 !important;
+}
+.v-application .primary--text.text--lighten-5 {
+  color: #ffb681 !important;
+  caret-color: #ffb681 !important;
+}
+.v-application .primary.lighten-4 {
+  background-color: #ef9b67 !important;
+  border-color: #ef9b67 !important;
+}
+.v-application .primary--text.text--lighten-4 {
+  color: #ef9b67 !important;
+  caret-color: #ef9b67 !important;
+}
+.v-application .primary.lighten-3 {
+  background-color: #d0814e !important;
+  border-color: #d0814e !important;
+}
+.v-application .primary--text.text--lighten-3 {
+  color: #d0814e !important;
+  caret-color: #d0814e !important;
+}
+.v-application .primary.lighten-2 {
+  background-color: #b36736 !important;
+  border-color: #b36736 !important;
+}
+.v-application .primary--text.text--lighten-2 {
+  color: #b36736 !important;
+  caret-color: #b36736 !important;
+}
+.v-application .primary.lighten-1 {
+  background-color: #964f1f !important;
+  border-color: #964f1f !important;
+}
+.v-application .primary--text.text--lighten-1 {
+  color: #964f1f !important;
+  caret-color: #964f1f !important;
+}
+.v-application .primary.darken-1 {
+  background-color: #5e2000 !important;
+  border-color: #5e2000 !important;
+}
+.v-application .primary--text.text--darken-1 {
+  color: #5e2000 !important;
+  caret-color: #5e2000 !important;
+}
+.v-application .primary.darken-2 {
+  background-color: #460700 !important;
+  border-color: #460700 !important;
+}
+.v-application .primary--text.text--darken-2 {
+  color: #460700 !important;
+  caret-color: #460700 !important;
+}
+.v-application .primary.darken-3 {
+  background-color: #350000 !important;
+  border-color: #350000 !important;
+}
+.v-application .primary--text.text--darken-3 {
+  color: #350000 !important;
+  caret-color: #350000 !important;
+}
+.v-application .primary.darken-4 {
+  background-color: #2c0000 !important;
+  border-color: #2c0000 !important;
+}
+.v-application .primary--text.text--darken-4 {
+  color: #2c0000 !important;
+  caret-color: #2c0000 !important;
+}
+.v-application .secondary {
+  background-color: #261f1f !important;
+  border-color: #261f1f !important;
+}
+.v-application .secondary--text {
+  color: #261f1f !important;
+  caret-color: #261f1f !important;
+}
+.v-application .secondary.lighten-5 {
+  background-color: #9e9595 !important;
+  border-color: #9e9595 !important;
+}
+.v-application .secondary--text.text--lighten-5 {
+  color: #9e9595 !important;
+  caret-color: #9e9595 !important;
+}
+.v-application .secondary.lighten-4 {
+  background-color: #847b7b !important;
+  border-color: #847b7b !important;
+}
+.v-application .secondary--text.text--lighten-4 {
+  color: #847b7b !important;
+  caret-color: #847b7b !important;
+}
+.v-application .secondary.lighten-3 {
+  background-color: #6b6362 !important;
+  border-color: #6b6362 !important;
+}
+.v-application .secondary--text.text--lighten-3 {
+  color: #6b6362 !important;
+  caret-color: #6b6362 !important;
+}
+.v-application .secondary.lighten-2 {
+  background-color: #534b4b !important;
+  border-color: #534b4b !important;
+}
+.v-application .secondary--text.text--lighten-2 {
+  color: #534b4b !important;
+  caret-color: #534b4b !important;
+}
+.v-application .secondary.lighten-1 {
+  background-color: #3c3434 !important;
+  border-color: #3c3434 !important;
+}
+.v-application .secondary--text.text--lighten-1 {
+  color: #3c3434 !important;
+  caret-color: #3c3434 !important;
+}
+.v-application .secondary.darken-1 {
+  background-color: #120706 !important;
+  border-color: #120706 !important;
+}
+.v-application .secondary--text.text--darken-1 {
+  color: #120706 !important;
+  caret-color: #120706 !important;
+}
+.v-application .secondary.darken-2 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-2 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .secondary.darken-3 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-3 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .secondary.darken-4 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-4 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .accent {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+.v-application .accent--text {
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+}
+.v-application .accent.lighten-5 {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+.v-application .accent--text.text--lighten-5 {
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+}
+.v-application .accent.lighten-4 {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+.v-application .accent--text.text--lighten-4 {
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+}
+.v-application .accent.lighten-3 {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+.v-application .accent--text.text--lighten-3 {
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+}
+.v-application .accent.lighten-2 {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+.v-application .accent--text.text--lighten-2 {
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+}
+.v-application .accent.lighten-1 {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+.v-application .accent--text.text--lighten-1 {
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+}
+.v-application .accent.darken-1 {
+  background-color: #e2e2e2 !important;
+  border-color: #e2e2e2 !important;
+}
+.v-application .accent--text.text--darken-1 {
+  color: #e2e2e2 !important;
+  caret-color: #e2e2e2 !important;
+}
+.v-application .accent.darken-2 {
+  background-color: #c6c6c6 !important;
+  border-color: #c6c6c6 !important;
+}
+.v-application .accent--text.text--darken-2 {
+  color: #c6c6c6 !important;
+  caret-color: #c6c6c6 !important;
+}
+.v-application .accent.darken-3 {
+  background-color: #ababab !important;
+  border-color: #ababab !important;
+}
+.v-application .accent--text.text--darken-3 {
+  color: #ababab !important;
+  caret-color: #ababab !important;
+}
+.v-application .accent.darken-4 {
+  background-color: #919191 !important;
+  border-color: #919191 !important;
+}
+.v-application .accent--text.text--darken-4 {
+  color: #919191 !important;
+  caret-color: #919191 !important;
+}
+.v-application .error {
+  background-color: #ff5252 !important;
+  border-color: #ff5252 !important;
+}
+.v-application .error--text {
+  color: #ff5252 !important;
+  caret-color: #ff5252 !important;
+}
+.v-application .error.lighten-5 {
+  background-color: #ffe4d5 !important;
+  border-color: #ffe4d5 !important;
+}
+.v-application .error--text.text--lighten-5 {
+  color: #ffe4d5 !important;
+  caret-color: #ffe4d5 !important;
+}
+.v-application .error.lighten-4 {
+  background-color: #ffc6b9 !important;
+  border-color: #ffc6b9 !important;
+}
+.v-application .error--text.text--lighten-4 {
+  color: #ffc6b9 !important;
+  caret-color: #ffc6b9 !important;
+}
+.v-application .error.lighten-3 {
+  background-color: #ffa99e !important;
+  border-color: #ffa99e !important;
+}
+.v-application .error--text.text--lighten-3 {
+  color: #ffa99e !important;
+  caret-color: #ffa99e !important;
+}
+.v-application .error.lighten-2 {
+  background-color: #ff8c84 !important;
+  border-color: #ff8c84 !important;
+}
+.v-application .error--text.text--lighten-2 {
+  color: #ff8c84 !important;
+  caret-color: #ff8c84 !important;
+}
+.v-application .error.lighten-1 {
+  background-color: #ff6f6a !important;
+  border-color: #ff6f6a !important;
+}
+.v-application .error--text.text--lighten-1 {
+  color: #ff6f6a !important;
+  caret-color: #ff6f6a !important;
+}
+.v-application .error.darken-1 {
+  background-color: #df323b !important;
+  border-color: #df323b !important;
+}
+.v-application .error--text.text--darken-1 {
+  color: #df323b !important;
+  caret-color: #df323b !important;
+}
+.v-application .error.darken-2 {
+  background-color: #bf0025 !important;
+  border-color: #bf0025 !important;
+}
+.v-application .error--text.text--darken-2 {
+  color: #bf0025 !important;
+  caret-color: #bf0025 !important;
+}
+.v-application .error.darken-3 {
+  background-color: #9f0010 !important;
+  border-color: #9f0010 !important;
+}
+.v-application .error--text.text--darken-3 {
+  color: #9f0010 !important;
+  caret-color: #9f0010 !important;
+}
+.v-application .error.darken-4 {
+  background-color: #800000 !important;
+  border-color: #800000 !important;
+}
+.v-application .error--text.text--darken-4 {
+  color: #800000 !important;
+  caret-color: #800000 !important;
+}
+.v-application .info {
+  background-color: #2196f3 !important;
+  border-color: #2196f3 !important;
+}
+.v-application .info--text {
+  color: #2196f3 !important;
+  caret-color: #2196f3 !important;
+}
+.v-application .info.lighten-5 {
+  background-color: #d4ffff !important;
+  border-color: #d4ffff !important;
+}
+.v-application .info--text.text--lighten-5 {
+  color: #d4ffff !important;
+  caret-color: #d4ffff !important;
+}
+.v-application .info.lighten-4 {
+  background-color: #b5ffff !important;
+  border-color: #b5ffff !important;
+}
+.v-application .info--text.text--lighten-4 {
+  color: #b5ffff !important;
+  caret-color: #b5ffff !important;
+}
+.v-application .info.lighten-3 {
+  background-color: #95e8ff !important;
+  border-color: #95e8ff !important;
+}
+.v-application .info--text.text--lighten-3 {
+  color: #95e8ff !important;
+  caret-color: #95e8ff !important;
+}
+.v-application .info.lighten-2 {
+  background-color: #75ccff !important;
+  border-color: #75ccff !important;
+}
+.v-application .info--text.text--lighten-2 {
+  color: #75ccff !important;
+  caret-color: #75ccff !important;
+}
+.v-application .info.lighten-1 {
+  background-color: #51b0ff !important;
+  border-color: #51b0ff !important;
+}
+.v-application .info--text.text--lighten-1 {
+  color: #51b0ff !important;
+  caret-color: #51b0ff !important;
+}
+.v-application .info.darken-1 {
+  background-color: #007cd6 !important;
+  border-color: #007cd6 !important;
+}
+.v-application .info--text.text--darken-1 {
+  color: #007cd6 !important;
+  caret-color: #007cd6 !important;
+}
+.v-application .info.darken-2 {
+  background-color: #0064ba !important;
+  border-color: #0064ba !important;
+}
+.v-application .info--text.text--darken-2 {
+  color: #0064ba !important;
+  caret-color: #0064ba !important;
+}
+.v-application .info.darken-3 {
+  background-color: #004d9f !important;
+  border-color: #004d9f !important;
+}
+.v-application .info--text.text--darken-3 {
+  color: #004d9f !important;
+  caret-color: #004d9f !important;
+}
+.v-application .info.darken-4 {
+  background-color: #003784 !important;
+  border-color: #003784 !important;
+}
+.v-application .info--text.text--darken-4 {
+  color: #003784 !important;
+  caret-color: #003784 !important;
+}
+.v-application .success {
+  background-color: #4caf50 !important;
+  border-color: #4caf50 !important;
+}
+.v-application .success--text {
+  color: #4caf50 !important;
+  caret-color: #4caf50 !important;
+}
+.v-application .success.lighten-5 {
+  background-color: #dcffd6 !important;
+  border-color: #dcffd6 !important;
+}
+.v-application .success--text.text--lighten-5 {
+  color: #dcffd6 !important;
+  caret-color: #dcffd6 !important;
+}
+.v-application .success.lighten-4 {
+  background-color: #beffba !important;
+  border-color: #beffba !important;
+}
+.v-application .success--text.text--lighten-4 {
+  color: #beffba !important;
+  caret-color: #beffba !important;
+}
+.v-application .success.lighten-3 {
+  background-color: #a2ff9e !important;
+  border-color: #a2ff9e !important;
+}
+.v-application .success--text.text--lighten-3 {
+  color: #a2ff9e !important;
+  caret-color: #a2ff9e !important;
+}
+.v-application .success.lighten-2 {
+  background-color: #85e783 !important;
+  border-color: #85e783 !important;
+}
+.v-application .success--text.text--lighten-2 {
+  color: #85e783 !important;
+  caret-color: #85e783 !important;
+}
+.v-application .success.lighten-1 {
+  background-color: #69cb69 !important;
+  border-color: #69cb69 !important;
+}
+.v-application .success--text.text--lighten-1 {
+  color: #69cb69 !important;
+  caret-color: #69cb69 !important;
+}
+.v-application .success.darken-1 {
+  background-color: #2d9437 !important;
+  border-color: #2d9437 !important;
+}
+.v-application .success--text.text--darken-1 {
+  color: #2d9437 !important;
+  caret-color: #2d9437 !important;
+}
+.v-application .success.darken-2 {
+  background-color: #00791e !important;
+  border-color: #00791e !important;
+}
+.v-application .success--text.text--darken-2 {
+  color: #00791e !important;
+  caret-color: #00791e !important;
+}
+.v-application .success.darken-3 {
+  background-color: #006000 !important;
+  border-color: #006000 !important;
+}
+.v-application .success--text.text--darken-3 {
+  color: #006000 !important;
+  caret-color: #006000 !important;
+}
+.v-application .success.darken-4 {
+  background-color: #004700 !important;
+  border-color: #004700 !important;
+}
+.v-application .success--text.text--darken-4 {
+  color: #004700 !important;
+  caret-color: #004700 !important;
+}
+.v-application .warning {
+  background-color: #fb8c00 !important;
+  border-color: #fb8c00 !important;
+}
+.v-application .warning--text {
+  color: #fb8c00 !important;
+  caret-color: #fb8c00 !important;
+}
+.v-application .warning.lighten-5 {
+  background-color: #ffff9e !important;
+  border-color: #ffff9e !important;
+}
+.v-application .warning--text.text--lighten-5 {
+  color: #ffff9e !important;
+  caret-color: #ffff9e !important;
+}
+.v-application .warning.lighten-4 {
+  background-color: #fffb82 !important;
+  border-color: #fffb82 !important;
+}
+.v-application .warning--text.text--lighten-4 {
+  color: #fffb82 !important;
+  caret-color: #fffb82 !important;
+}
+.v-application .warning.lighten-3 {
+  background-color: #ffdf67 !important;
+  border-color: #ffdf67 !important;
+}
+.v-application .warning--text.text--lighten-3 {
+  color: #ffdf67 !important;
+  caret-color: #ffdf67 !important;
+}
+.v-application .warning.lighten-2 {
+  background-color: #ffc24b !important;
+  border-color: #ffc24b !important;
+}
+.v-application .warning--text.text--lighten-2 {
+  color: #ffc24b !important;
+  caret-color: #ffc24b !important;
+}
+.v-application .warning.lighten-1 {
+  background-color: #ffa72d !important;
+  border-color: #ffa72d !important;
+}
+.v-application .warning--text.text--lighten-1 {
+  color: #ffa72d !important;
+  caret-color: #ffa72d !important;
+}
+.v-application .warning.darken-1 {
+  background-color: #db7200 !important;
+  border-color: #db7200 !important;
+}
+.v-application .warning--text.text--darken-1 {
+  color: #db7200 !important;
+  caret-color: #db7200 !important;
+}
+.v-application .warning.darken-2 {
+  background-color: #bb5900 !important;
+  border-color: #bb5900 !important;
+}
+.v-application .warning--text.text--darken-2 {
+  color: #bb5900 !important;
+  caret-color: #bb5900 !important;
+}
+.v-application .warning.darken-3 {
+  background-color: #9d4000 !important;
+  border-color: #9d4000 !important;
+}
+.v-application .warning--text.text--darken-3 {
+  color: #9d4000 !important;
+  caret-color: #9d4000 !important;
+}
+.v-application .warning.darken-4 {
+  background-color: #802700 !important;
+  border-color: #802700 !important;
+}
+.v-application .warning--text.text--darken-4 {
+  color: #802700 !important;
+  caret-color: #802700 !important;
+}</style></head><body><noscript><strong>We're sorry but apex-tourney-frontend doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div class="app-wrap"><div class="app-wrap-overlay"></div><div class="app-wrap-overlay1"></div><svg id="canvas" viewBox="0 0 1280 750"><!----><image x="359.81997434914297" y="586.4233624071121" width="20" href="/img/leaf4.webp"></image><image x="288.74912661188506" y="533.5999768485807" width="33" href="/img/leaf4.webp"></image><image x="823.7569115462394" y="706.8219054749901" width="27" href="/img/leaf4.webp"></image><image x="200.9714537389151" y="699.9863656873996" width="18" href="/img/leaf3.webp"></image><image x="213.04583631110071" y="94.92339055376752" width="32" href="/img/leaf4.webp"></image><image x="662.5379203264604" y="571.9140516166028" width="23" href="/img/leaf2.webp"></image><image x="168.2940357687174" y="559.1724317124476" width="31" href="/img/leaf2.webp"></image><image x="234.79175131080984" y="699.7240471338532" width="13" href="/img/leaf2.webp"></image><image x="835.9058400447203" y="504.81350630621887" width="19" href="/img/leaf1.webp"></image><image x="488.14325912986726" y="482.51281249667153" width="31" href="/img/leaf4.webp"></image><image x="549.7930625963683" y="709.0466335944932" width="21" href="/img/leaf1.webp"></image><image x="921.0580709425402" y="524.575731746477" width="18" href="/img/leaf1.webp"></image><image x="359.58430709277417" y="711.8912614601732" width="17" href="/img/leaf4.webp"></image><image x="362.0427068116791" y="320.1159053797325" width="25" href="/img/leaf4.webp"></image><image x="492.3273554339608" y="385.42512792569715" width="24" href="/img/leaf4.webp"></image><image x="74.09910470039638" y="708.6155080295039" width="19" href="/img/leaf4.webp"></image><image x="22.333085469958533" y="464.13375893284973" width="19" href="/img/leaf3.webp"></image><image x="1021.8145581751023" y="549.4694194573582" width="25" href="/img/leaf3.webp"></image><image x="139.23520126322168" y="191.6018673955306" width="33" href="/img/leaf1.webp"></image><image x="11.941662142185915" y="606.2931766836776" width="28" href="/img/leaf2.webp"></image><image x="902.1753944567253" y="602.2556077163779" width="33" href="/img/leaf1.webp"></image><image x="752.8496143132181" y="705.1179124071897" width="31" href="/img/leaf3.webp"></image><image x="361.7918923596033" y="458.1525350164636" width="22" href="/img/leaf4.webp"></image><image x="1140.056658142675" y="289.6421813214079" width="12" href="/img/leaf3.webp"></image><image x="697.4461847245489" y="701.0290676662603" width="13" href="/img/leaf3.webp"></image><image x="1034.932685105029" y="599.9037913768201" width="34" href="/img/leaf3.webp"></image><image x="979.4690665487291" y="384.34753213538824" width="26" href="/img/leaf4.webp"></image><image x="985.3082710051434" y="578.779205434723" width="21" href="/img/leaf3.webp"></image><image x="992.6357458755313" y="605.0168198653763" width="16" href="/img/leaf3.webp"></image><image x="393.4344463080805" y="213.45541216184134" width="28" href="/img/leaf2.webp"></image><image x="603.4018211722384" y="521.4962118677701" width="15" href="/img/leaf3.webp"></image><image x="1211.7936437561093" y="699.6271088075689" width="15" href="/img/leaf1.webp"></image><image x="793.4586887559775" y="256.9098898994844" width="21" href="/img/leaf2.webp"></image><image x="1227.4395644456872" y="514.6326102766144" width="10" href="/img/leaf4.webp"></image><image x="652.9066605428699" y="645.3574051150306" width="28" href="/img/leaf2.webp"></image><image x="994.5203486396613" y="705.1314077800653" width="21" href="/img/leaf1.webp"></image><image x="1017.6944744721416" y="681.6871903987063" width="19" href="/img/leaf4.webp"></image><image x="988.6318249075065" y="302.0545927943579" width="25" href="/img/leaf3.webp"></image><image x="737.7569878879565" y="210.57386196211317" width="11" href="/img/leaf2.webp"></image><image x="433.4518742451383" y="701.7317210024194" width="12" href="/img/leaf3.webp"></image><image x="37.04461367333321" y="432.96324608924914" width="33" href="/img/leaf3.webp"></image><image x="1210.05448161813" y="694.634221176622" width="21" href="/img/leaf3.webp"></image><image x="1153.8754986077327" y="695.8331360745306" width="33" href="/img/leaf4.webp"></image><image x="234.95560534558783" y="378.4531694139" width="12" href="/img/leaf2.webp"></image><image x="324.7257589666288" y="696.7606453026169" width="30" href="/img/leaf1.webp"></image><image x="844.634005599648" y="557.1627218927802" width="29" href="/img/leaf3.webp"></image><image x="865.5919229515786" y="346.7667881487612" width="26" href="/img/leaf1.webp"></image><image x="749.1482361685204" y="292.53732981300175" width="18" href="/img/leaf1.webp"></image><image x="232.9274078494113" y="455.48206046186124" width="15" href="/img/leaf2.webp"></image><image x="1127.7320215287345" y="704.6576052844724" width="27" href="/img/leaf4.webp"></image><image x="110.3184343624678" y="705.1267888698079" width="28" href="/img/leaf4.webp"></image><image x="309.60694738844035" y="270.54533434948564" width="18" href="/img/leaf4.webp"></image><image x="759.3574441043131" y="704.5878553511544" width="27" href="/img/leaf3.webp"></image><image x="828.8716738446508" y="307.9283479517551" width="20" href="/img/leaf4.webp"></image><image x="104.59528321136222" y="227.7853939766683" width="19" href="/img/leaf4.webp"></image><image x="112.0008173580211" y="515.8370417252672" width="33" href="/img/leaf2.webp"></image><image x="464.99300463382104" y="612.7627672732939" width="23" href="/img/leaf2.webp"></image><image x="669.513439569645" y="256.48591574004166" width="21" href="/img/leaf3.webp"></image><image x="675.6503870614898" y="415.8992682153905" width="24" href="/img/leaf1.webp"></image><image x="16.662402784340493" y="700.661406134912" width="21" href="/img/leaf1.webp"></image><image x="389.3005862921457" y="336.7051756757029" width="11" href="/img/leaf4.webp"></image><image x="984.1071703342595" y="508.38706826675843" width="11" href="/img/leaf1.webp"></image><image x="1073.6830202954325" y="702.3441583657471" width="27" href="/img/leaf4.webp"></image><image x="645.0474290495456" y="641.0782110521362" width="30" href="/img/leaf1.webp"></image><image x="606.9243386139087" y="701.0751173074286" width="27" href="/img/leaf1.webp"></image><image x="1046.8697364883924" y="706.5354938180085" width="18" href="/img/leaf3.webp"></image><image x="838.8313992757237" y="713.076591566733" width="10" href="/img/leaf2.webp"></image><image x="690.588899487811" y="695.8014068645998" width="27" href="/img/leaf1.webp"></image><image x="308.3649467886969" y="699.204537115308" width="16" href="/img/leaf4.webp"></image><image x="175.93056705927384" y="705.0336750603799" width="28" href="/img/leaf3.webp"></image><image x="1109.6860833322926" y="444.7130928081933" width="12" href="/img/leaf2.webp"></image><image x="1008.769472586256" y="400.46501881515115" width="19" href="/img/leaf4.webp"></image><image x="469.74616539570906" y="702.2539258294021" width="24" href="/img/leaf3.webp"></image><image x="706.2487044830408" y="519.7739104817115" width="16" href="/img/leaf3.webp"></image><image x="600.4342162662056" y="669.2157233089158" width="23" href="/img/leaf1.webp"></image><image x="19.941905633854567" y="401.0901568009411" width="29" href="/img/leaf1.webp"></image><image x="652.5830483326213" y="274.9032454312782" width="19" href="/img/leaf2.webp"></image><image x="854.4816669599883" y="435.51151431376996" width="25" href="/img/leaf2.webp"></image><image x="935.8548238635926" y="309.2230168395754" width="34" href="/img/leaf3.webp"></image><image x="676.2675558521928" y="112.31337933053287" width="20" href="/img/leaf2.webp"></image><image x="667.9910711457544" y="494.04808461596707" width="24" href="/img/leaf1.webp"></image><image x="921.869950960552" y="457.3809784651089" width="14" href="/img/leaf4.webp"></image><image x="935.0180579732844" y="435.3095240954009" width="25" href="/img/leaf1.webp"></image><image x="689.7514571237289" y="699.811668716156" width="18" href="/img/leaf3.webp"></image><image x="902.2095526722769" y="696.5275939153905" width="25" href="/img/leaf4.webp"></image><image x="728.6683000814412" y="120.2392205760109" width="17" href="/img/leaf3.webp"></image><image x="1045.2028925161671" y="445.36155877111514" width="17" href="/img/leaf1.webp"></image><image x="318.3826347156645" y="673.9738643546535" width="30" href="/img/leaf3.webp"></image><image x="792.5303810295434" y="696.7399213022038" width="31" href="/img/leaf2.webp"></image><image x="564.1708300301844" y="705.2853601138537" width="20" href="/img/leaf3.webp"></image><image x="251.06582763073658" y="704.9301828641758" width="21" href="/img/leaf4.webp"></image><image x="1162.6908871350302" y="293.0767548964263" width="10" href="/img/leaf1.webp"></image><image x="29.555697562673977" y="174.188374921016" width="23" href="/img/leaf4.webp"></image><image x="259.1782193570606" y="63.735581587620416" width="21" href="/img/leaf3.webp"></image><image x="421.58476118279236" y="46.908702912627305" width="34" href="/img/leaf3.webp"></image><image x="1065.573276243229" y="215.10882989622536" width="14" href="/img/leaf3.webp"></image><image x="243.8326960562029" y="73.53043210538465" width="21" href="/img/leaf3.webp"></image><image x="427.10238955403935" y="165.7674715979633" width="12" href="/img/leaf2.webp"></image><image x="349.2726923390982" y="125.02644613505078" width="18" href="/img/leaf2.webp"></image><image x="401.5064551919567" y="55.6325536749534" width="33" href="/img/leaf4.webp"></image><image x="828.4383237046212" y="65.54609122509629" width="20" href="/img/leaf2.webp"></image><image x="503.75302419295286" y="46.04870194695765" width="16" href="/img/leaf4.webp"></image><image x="1089.5919309839992" y="73.77067820259047" width="16" href="/img/leaf3.webp"></image><image x="509.1070877613945" y="105.1784655618505" width="34" href="/img/leaf1.webp"></image><image x="801.0940797266395" y="111.32186107268889" width="29" href="/img/leaf2.webp"></image><image x="471.34745135974606" y="75.38205258928835" width="17" href="/img/leaf4.webp"></image><image x="1086.3599145639112" y="28.0334905702786" width="11" href="/img/leaf3.webp"></image><image x="945.708343102135" y="84.45680553042959" width="11" href="/img/leaf1.webp"></image><image x="314.9918350102514" y="88.01844441109692" width="20" href="/img/leaf3.webp"></image><image x="851.2608283146764" y="31.17350386518922" width="15" href="/img/leaf4.webp"></image><image x="679.7039263450681" y="90.81272525364191" width="21" href="/img/leaf1.webp"></image><image x="1006.4351696472324" y="71.78001176372274" width="33" href="/img/leaf3.webp"></image><image x="521.3541698500961" y="41.761366515809115" width="21" href="/img/leaf2.webp"></image><image x="45.63303088993526" y="66.86387498682335" width="10" href="/img/leaf3.webp"></image><image x="315.71763056328314" y="38.96001012641537" width="15" href="/img/leaf3.webp"></image><image x="32.23354777075582" y="53.961585370799696" width="31" href="/img/leaf4.webp"></image><image x="128.22382453721522" y="13.611796202083372" width="24" href="/img/leaf1.webp"></image><image x="204.31458386914582" y="-0.2320917635708959" width="31" href="/img/leaf2.webp"></image><image x="670.3928234511299" y="8.060344640514217" width="28" href="/img/leaf4.webp"></image><image x="673.1415337377167" y="12.512566456552847" width="16" href="/img/leaf2.webp"></image><image x="1055.4885413752595" y="48.36227971744314" width="11" href="/img/leaf1.webp"></image><image x="604.004451945444" y="25.051296430651867" width="19" href="/img/leaf1.webp"></image><image x="765.1852346461102" y="31.269281926963686" width="20" href="/img/leaf4.webp"></image><image x="1117.756506043844" y="17.788395574376754" width="27" href="/img/leaf1.webp"></image><image x="340.9334004731197" y="10.94448946786208" width="11" href="/img/leaf2.webp"></image><image x="15.84368022405836" y="15.62318287532348" width="16" href="/img/leaf3.webp"></image><image x="308.42952064526963" y="11.24714966325821" width="11" href="/img/leaf2.webp"></image><image x="1182.529329467812" y="-8.529583875567809" width="33" href="/img/leaf4.webp"></image><text x="0" y="0" text-anchor="middle" class="d-leaves-ranked" style="transition: all 0.8s ease 0s, transform 0.5s ease-out 0s, opacity 0.6s ease 0s; font-size: 16px; opacity: 0; text-shadow: rgba(255, 255, 255, 0.667) 0px 0px 16px;">Leaves Raked 1231</text></svg><div data-app="true" class="v-application main-wrap v-application--is-ltr theme--dark" id="app"><div class="v-application--wrap"><div class="public-wrapper"><div data-v-336faa0b="" class="nav-container"><header data-v-336faa0b="" class="main-nav elevation-0"><div data-v-336faa0b="" class="toolbar-link-container"><a data-v-336faa0b="" href="/" class="toolbar-link router-link-active"><img data-v-336faa0b="" height="25" src="/img/overstat_logo.png" alt="logo" aria-label="Home"></a><a data-v-336faa0b="" href="/players" class="toolbar-link text" aria-label="search">Search</a><a data-v-336faa0b="" href="/map" class="toolbar-link text" aria-label="maps">Maps</a><a data-v-336faa0b="" href="/analytics" class="toolbar-link text" aria-label="analytics">Analytics</a><a data-v-336faa0b="" href="/ring-game" class="toolbar-link text" aria-label="ring-game">Ring Game </a><a data-v-336faa0b="" href="/aim" class="toolbar-link text hidden-xs-only" aria-label="ring-game">Aim Trainer</a></div><div data-v-336faa0b="" class="toolbar-right-container"><a data-v-336faa0b="" href="/admin" class="toolbar-link text">Organizer</a><div data-v-336faa0b="" class="v-menu"><!----></div><a data-v-336faa0b="" dark="" text="" role="button" aria-haspopup="true" aria-expanded="false" class="toolbar-link text"> Account </a></div></header></div><div class="page-header"><div class="page-title"><!----> -0Phony0- <span></span></div></div><div class="container"><div class="page-wrap"><div class="page-nav"><div class="link-container"><a href="/player/749175/overview" aria-current="page" class="nav-link router-link-exact-active router-link-active">Overview</a><a href="/player/749175/matches" class="nav-link">Matches</a><a href="/player/749175/teams" class="nav-link">Teams</a><a href="/player/749175/analytics/overview" class="nav-link">Analytics</a></div></div><div class="content-wrap"><div data-v-d5849fba="" class="page-wrap pt-4" id="749175"><!----><div data-v-d5849fba="" class="content-box-header text-center ma-3"><div data-v-d5849fba="" class="header">Featured Legends</div><div data-v-09eaba4e="" data-v-d5849fba="" class="characters-wrap px-2"><div data-v-09eaba4e="" class="row no-gutters"><!----><!----><div data-v-09eaba4e="" class="pa-1 col-lg-4 col-12"><div data-v-3acb75d6="" data-v-ce19b45e="" data-v-09eaba4e="" class="wrap wrap-background" alt="bangalore"><div data-v-3acb75d6="" class="img-underlay"><svg data-v-3acb75d6="" viewBox="0 0 767 767" width="100%" height="100%" xmlns:xlink="http://www.w3.org/1999/xlink"><defs data-v-3acb75d6=""><linearGradient data-v-3acb75d6="" id="fadeGrad" gradientTransform="rotate(90)"><stop data-v-3acb75d6="" offset="0" stop-color="white" stop-opacity="1"></stop><stop data-v-3acb75d6="" offset="20%" stop-color="white" stop-opacity="1"></stop><stop data-v-3acb75d6="" offset="80%" stop-color="black" stop-opacity="1"></stop></linearGradient><mask data-v-3acb75d6="" id="fade"><rect data-v-3acb75d6="" width="100%" height="100%" fill="url(#fadeGrad)"></rect></mask></defs><g data-v-3acb75d6="" mask="url(#fade)"><image data-v-3acb75d6="" href="/legend_imgs/bangalore.webp" width="100%" mask="url(#fade)"></image></g></svg></div><div data-v-3acb75d6="" class="overlay"><div data-v-ce19b45e="" data-v-3acb75d6="" class="character-content"><div data-v-ce19b45e="" data-v-3acb75d6="" class="character-pos"> &nbsp;</div><div data-v-ce19b45e="" data-v-3acb75d6="" class="character-name"><span data-v-ce19b45e="" data-v-3acb75d6=""> bangalore</span></div><div data-v-ce19b45e="" data-v-3acb75d6="" class="character-item"><div data-v-ce19b45e="" data-v-3acb75d6="" class="row"><div data-v-ce19b45e="" data-v-3acb75d6="" class="col"><div data-v-ce19b45e="" data-v-3acb75d6="" class="ctitle"><div data-v-ce19b45e="" data-v-3acb75d6="">Games</div></div></div><div data-v-ce19b45e="" data-v-3acb75d6="" class="col"><div data-v-ce19b45e="" data-v-3acb75d6="" class="cvalue"> 169 </div></div></div></div><div data-v-ce19b45e="" data-v-3acb75d6="" class="character-item"><div data-v-ce19b45e="" data-v-3acb75d6="" class="row"><div data-v-ce19b45e="" data-v-3acb75d6="" class="col"><div data-v-ce19b45e="" data-v-3acb75d6="" class="ctitle"><div data-v-ce19b45e="" data-v-3acb75d6="">Avg. Kills</div></div></div><div data-v-ce19b45e="" data-v-3acb75d6="" class="col"><div data-v-ce19b45e="" data-v-3acb75d6="" class="cvalue"> 1.32 </div></div></div></div><div data-v-ce19b45e="" data-v-3acb75d6="" class="character-item"><div data-v-ce19b45e="" data-v-3acb75d6="" class="row"><div data-v-ce19b45e="" data-v-3acb75d6="" class="col"><div data-v-ce19b45e="" data-v-3acb75d6="" class="ctitle"><div data-v-ce19b45e="" data-v-3acb75d6="">Avg. Damage</div></div></div><div data-v-ce19b45e="" data-v-3acb75d6="" class="col"><div data-v-ce19b45e="" data-v-3acb75d6="" class="cvalue"> 765 </div></div></div></div></div></div></div></div><div data-v-09eaba4e="" class="pa-1 col-lg-4 col-12"><div data-v-3acb75d6="" data-v-ce19b45e="" data-v-09eaba4e="" class="wrap wrap-background" alt="bloodhound"><div data-v-3acb75d6="" class="img-underlay"><svg data-v-3acb75d6="" viewBox="0 0 767 767" width="100%" height="100%" xmlns:xlink="http://www.w3.org/1999/xlink"><defs data-v-3acb75d6=""><linearGradient data-v-3acb75d6="" id="fadeGrad" gradientTransform="rotate(90)"><stop data-v-3acb75d6="" offset="0" stop-color="white" stop-opacity="1"></stop><stop data-v-3acb75d6="" offset="20%" stop-color="white" stop-opacity="1"></stop><stop data-v-3acb75d6="" offset="80%" stop-color="black" stop-opacity="1"></stop></linearGradient><mask data-v-3acb75d6="" id="fade"><rect data-v-3acb75d6="" width="100%" height="100%" fill="url(#fadeGrad)"></rect></mask></defs><g data-v-3acb75d6="" mask="url(#fade)"><image data-v-3acb75d6="" href="/legend_imgs/bloodhound.webp" width="100%" mask="url(#fade)"></image></g></svg></div><div data-v-3acb75d6="" class="overlay"><div data-v-ce19b45e="" data-v-3acb75d6="" class="character-content"><div data-v-ce19b45e="" data-v-3acb75d6="" class="character-pos"> &nbsp;</div><div data-v-ce19b45e="" data-v-3acb75d6="" class="character-name"><span data-v-ce19b45e="" data-v-3acb75d6=""> bloodhound</span></div><div data-v-ce19b45e="" data-v-3acb75d6="" class="character-item"><div data-v-ce19b45e="" data-v-3acb75d6="" class="row"><div data-v-ce19b45e="" data-v-3acb75d6="" class="col"><div data-v-ce19b45e="" data-v-3acb75d6="" class="ctitle"><div data-v-ce19b45e="" data-v-3acb75d6="">Games</div></div></div><div data-v-ce19b45e="" data-v-3acb75d6="" class="col"><div data-v-ce19b45e="" data-v-3acb75d6="" class="cvalue"> 116 </div></div></div></div><div data-v-ce19b45e="" data-v-3acb75d6="" class="character-item"><div data-v-ce19b45e="" data-v-3acb75d6="" class="row"><div data-v-ce19b45e="" data-v-3acb75d6="" class="col"><div data-v-ce19b45e="" data-v-3acb75d6="" class="ctitle"><div data-v-ce19b45e="" data-v-3acb75d6="">Avg. Kills</div></div></div><div data-v-ce19b45e="" data-v-3acb75d6="" class="col"><div data-v-ce19b45e="" data-v-3acb75d6="" class="cvalue"> 1.26 </div></div></div></div><div data-v-ce19b45e="" data-v-3acb75d6="" class="character-item"><div data-v-ce19b45e="" data-v-3acb75d6="" class="row"><div data-v-ce19b45e="" data-v-3acb75d6="" class="col"><div data-v-ce19b45e="" data-v-3acb75d6="" class="ctitle"><div data-v-ce19b45e="" data-v-3acb75d6="">Avg. Damage</div></div></div><div data-v-ce19b45e="" data-v-3acb75d6="" class="col"><div data-v-ce19b45e="" data-v-3acb75d6="" class="cvalue"> 653.11 </div></div></div></div></div></div></div></div><div data-v-09eaba4e="" class="pa-1 col-lg-4 col-12"><div data-v-3acb75d6="" data-v-ce19b45e="" data-v-09eaba4e="" class="wrap wrap-background" alt="alter"><div data-v-3acb75d6="" class="img-underlay"><svg data-v-3acb75d6="" viewBox="0 0 767 767" width="100%" height="100%" xmlns:xlink="http://www.w3.org/1999/xlink"><defs data-v-3acb75d6=""><linearGradient data-v-3acb75d6="" id="fadeGrad" gradientTransform="rotate(90)"><stop data-v-3acb75d6="" offset="0" stop-color="white" stop-opacity="1"></stop><stop data-v-3acb75d6="" offset="20%" stop-color="white" stop-opacity="1"></stop><stop data-v-3acb75d6="" offset="80%" stop-color="black" stop-opacity="1"></stop></linearGradient><mask data-v-3acb75d6="" id="fade"><rect data-v-3acb75d6="" width="100%" height="100%" fill="url(#fadeGrad)"></rect></mask></defs><g data-v-3acb75d6="" mask="url(#fade)"><image data-v-3acb75d6="" href="/legend_imgs/alter.webp" width="100%" mask="url(#fade)"></image></g></svg></div><div data-v-3acb75d6="" class="overlay"><div data-v-ce19b45e="" data-v-3acb75d6="" class="character-content"><div data-v-ce19b45e="" data-v-3acb75d6="" class="character-pos"> &nbsp;</div><div data-v-ce19b45e="" data-v-3acb75d6="" class="character-name"><span data-v-ce19b45e="" data-v-3acb75d6=""> alter</span></div><div data-v-ce19b45e="" data-v-3acb75d6="" class="character-item"><div data-v-ce19b45e="" data-v-3acb75d6="" class="row"><div data-v-ce19b45e="" data-v-3acb75d6="" class="col"><div data-v-ce19b45e="" data-v-3acb75d6="" class="ctitle"><div data-v-ce19b45e="" data-v-3acb75d6="">Games</div></div></div><div data-v-ce19b45e="" data-v-3acb75d6="" class="col"><div data-v-ce19b45e="" data-v-3acb75d6="" class="cvalue"> 108 </div></div></div></div><div data-v-ce19b45e="" data-v-3acb75d6="" class="character-item"><div data-v-ce19b45e="" data-v-3acb75d6="" class="row"><div data-v-ce19b45e="" data-v-3acb75d6="" class="col"><div data-v-ce19b45e="" data-v-3acb75d6="" class="ctitle"><div data-v-ce19b45e="" data-v-3acb75d6="">Avg. Kills</div></div></div><div data-v-ce19b45e="" data-v-3acb75d6="" class="col"><div data-v-ce19b45e="" data-v-3acb75d6="" class="cvalue"> 1.62 </div></div></div></div><div data-v-ce19b45e="" data-v-3acb75d6="" class="character-item"><div data-v-ce19b45e="" data-v-3acb75d6="" class="row"><div data-v-ce19b45e="" data-v-3acb75d6="" class="col"><div data-v-ce19b45e="" data-v-3acb75d6="" class="ctitle"><div data-v-ce19b45e="" data-v-3acb75d6="">Avg. Damage</div></div></div><div data-v-ce19b45e="" data-v-3acb75d6="" class="col"><div data-v-ce19b45e="" data-v-3acb75d6="" class="cvalue"> 977.76 </div></div></div></div></div></div></div></div></div></div><button data-v-d5849fba="" type="button" class="view-all v-btn v-btn--block v-btn--text theme--dark v-size--default"><span class="v-btn__content"><span data-v-40d95056="" data-v-d5849fba="" class="material-symbols-outlined">expand_more</span></span></button></div><div data-v-d5849fba="" class="row stats-wrap"><div data-v-d5849fba="" class="col"><div data-v-d5849fba="" class="content-box"><div data-v-d5849fba="" class="content-box-header text-center header">In-game Names</div><div data-v-d5849fba="" class="text-center">-0Phony0-</div><div data-v-d5849fba="" class="text-center">#1 poutine lover</div><div data-v-d5849fba="" class="text-center">#1 Slytitan fan</div><div data-v-d5849fba="" class="text-center">Anita Dickinme</div><div data-v-d5849fba="" class="text-center">Anita Hardcock</div><div data-v-d5849fba="" class="text-center">Anita Hardcok</div><div data-v-d5849fba="" class="text-center">Backshots gaming</div><div data-v-d5849fba="" class="text-center">Baguette 1: The Baguette Menace</div><div data-v-d5849fba="" class="text-center">Ben Gurgen Hoffe</div><div data-v-d5849fba="" class="text-center">Ben O. Verbich</div><div data-v-d5849fba="" class="text-center">Budget Genburten</div><div data-v-d5849fba="" class="text-center">Built like a porta potty</div><div data-v-d5849fba="" class="text-center">Byf Lau</div><div data-v-d5849fba="" class="text-center">BYF Lau</div><div data-v-d5849fba="" class="text-center">BYF_Lau</div><div data-v-d5849fba="" class="text-center">Eddy son</div><div data-v-d5849fba="" class="text-center">E. Norma Scock</div><div data-v-d5849fba="" class="text-center">Farming Simulator pro player</div><div data-v-d5849fba="" class="text-center">Faze Lau</div><div data-v-d5849fba="" class="text-center">Faze Phony</div><div data-v-d5849fba="" class="text-center">FILAU MIGNON</div><div data-v-d5849fba="" class="text-center">FILLAU MIGNON</div><div data-v-d5849fba="" class="text-center">it do be farting</div><div data-v-d5849fba="" class="text-center">Johnny Baloney</div><div data-v-d5849fba="" class="text-center">lau</div><div data-v-d5849fba="" class="text-center">Lau</div><div data-v-d5849fba="" class="text-center">laucardinal</div><div data-v-d5849fba="" class="text-center">laurenzo</div><div data-v-d5849fba="" class="text-center">LauTitan</div><div data-v-d5849fba="" class="text-center">level 20842 in candy crush</div><div data-v-d5849fba="" class="text-center">Like a BOOOOOOOOKKK</div><div data-v-d5849fba="" class="text-center">Low</div><div data-v-d5849fba="" class="text-center">Monkey</div><div data-v-d5849fba="" class="text-center">Move or be moved</div><div data-v-d5849fba="" class="text-center">Mr. Bean</div><div data-v-d5849fba="" class="text-center">NOTBYFIRE_Lau</div><div data-v-d5849fba="" class="text-center">Rocky Balboa</div><div data-v-d5849fba="" class="text-center">Sly you're old</div><div data-v-d5849fba="" class="text-center">Spiderman: Far From Healthy</div><div data-v-d5849fba="" class="text-center">Suki is my son</div><div data-v-d5849fba="" class="text-center">The Baguette Man</div><div data-v-d5849fba="" class="text-center">The French Monster</div><div data-v-d5849fba="" class="text-center">the stupid canadian kid</div><div data-v-d5849fba="" class="text-center">Viva Goon is my daddy</div><div data-v-d5849fba="" class="text-center">Viva Lau</div><div data-v-d5849fba="" class="text-center">Viva MNK</div><div data-v-d5849fba="" class="text-center">Vive le Québec libre</div><div data-v-d5849fba="" class="text-center">#VIVRELEQUÉBECLIBRE</div><div data-v-d5849fba="" class="text-center">Zourafa is my son</div></div></div><div data-v-d5849fba="" class="col"><div data-v-d5849fba="" class="content-box"><div data-v-d5849fba="" class="content-box-header text-center header">Stats</div><div data-v-d5849fba="" class="content-box-content"><table data-v-d5849fba="" class="table-wrap"><tr data-v-d5849fba="" class="head"><th data-v-d5849fba=""></th><th data-v-d5849fba="">Total</th><th data-v-d5849fba="">Average</th></tr><tr data-v-d5849fba="" class="main"><td data-v-d5849fba="" class="key">Kills</td><td data-v-d5849fba="" class="value">1,948</td><td data-v-d5849fba="" class="value">1.42</td></tr><tr data-v-d5849fba="" class="main"><td data-v-d5849fba="" class="key">Revives</td><td data-v-d5849fba="" class="value">375</td><td data-v-d5849fba="" class="value">0.27</td></tr><tr data-v-d5849fba="" class="main"><td data-v-d5849fba="" class="key">Headshots</td><td data-v-d5849fba="" class="value">4,894</td><td data-v-d5849fba="" class="value">3.57</td></tr><tr data-v-d5849fba="" class="main"><td data-v-d5849fba="" class="key">Assists</td><td data-v-d5849fba="" class="value">1,878</td><td data-v-d5849fba="" class="value">1.37</td></tr><tr data-v-d5849fba="" class="main"><td data-v-d5849fba="" class="key">Time</td><td data-v-d5849fba="" class="value">14d 36m 52s</td><td data-v-d5849fba="" class="value">14m 45s</td></tr><tr data-v-d5849fba="" class="main"><td data-v-d5849fba="" class="key">Respawns</td><td data-v-d5849fba="" class="value">175</td><td data-v-d5849fba="" class="value">0.12</td></tr><tr data-v-d5849fba="" class="main"><td data-v-d5849fba="" class="key">Damage</td><td data-v-d5849fba="" class="value">1,198,147</td><td data-v-d5849fba="" class="value">875.83</td></tr><tr data-v-d5849fba="" class="main"><td data-v-d5849fba="" class="key">Hits</td><td data-v-d5849fba="" class="value">62,261</td><td data-v-d5849fba="" class="value">45.51</td></tr><tr data-v-d5849fba="" class="main"><td data-v-d5849fba="" class="key">Downs</td><td data-v-d5849fba="" class="value">2,516</td><td data-v-d5849fba="" class="value">1.83</td></tr><tr data-v-d5849fba="" class="main"><td data-v-d5849fba="" class="key">Shots</td><td data-v-d5849fba="" class="value">267,914</td><td data-v-d5849fba="" class="value">195.84</td></tr><tr data-v-d5849fba="" class="main"><td data-v-d5849fba="" class="key">totalGames</td><td data-v-d5849fba="" class="value">1,368</td><td data-v-d5849fba="" class="value">1</td></tr></table></div></div></div></div></div></div></div></div><div><div class="container"></div><div class="credit">Created by <a target="_blank" href="https://twitter.com/Double0_">@Double0negative</a> | <a href="">Toggle Animation Off</a> | <a href="/RAKE-SOME-LEAVES-HECK-YEA" class="aa">Rake Some Leaves!</a></div></div></div></div></div></div></body></html>

@@ -1,0 +1,104 @@
+VESA League - Schedule-Aware Division Seeding
+======================================================================
+
+Division Schedule:
+  Division 1: Thursday
+  Division 2: Wednesday
+  Division 3: Monday
+  Division 4: Thursday
+  Division 5: Monday
+  Division 6: Wednesday
+  Division 7: Monday
+
+Loaded 156 teams with ratings
+Processed 140 teams from FINAL PLACEMENTS
+⚠️  Excluded 17 waitlisted teams (not participating):
+    - Running Late
+    - RH Esports
+    - Mavericks
+    - BERZERKER
+    - Man or Mouse
+    - Genesis
+    - ACU Esports
+    - IggyBiggies
+    - Last Chance
+    - ABGs
+
+Schedule Compatibility Analysis:
+----------------------------------------------------------------------
+Teams with all divisions available: 102
+Teams with limited options: 37
+Teams with NO compatible divisions: 1
+
+⚠️  TEAMS WITH NO COMPATIBLE DIVISIONS:
+----------------------------------------------------------------------
+  New Alliance: Cannot play Monday, Wednesday, Thursday
+
+These teams will need manual placement or schedule adjustment.
+
+======================================================================
+SEEDING TEAMS INTO DIVISIONS (Skill-Grouped)
+======================================================================
+
+Target division sizes (for 140 active teams):
+  Division 1: 20 teams
+  Division 2: 20 teams
+  Division 3: 20 teams
+  Division 4: 20 teams
+  Division 5: 20 teams
+  Division 6: 20 teams
+  Division 7: 20 teams
+
+Placed: 137 teams
+Unplaced: 3 teams
+
+======================================================================
+DIVISION COMPOSITION:
+======================================================================
+
+Division 1 (Thursday):
+  Teams: 20/20
+  Rating: Avg=142.32, Max=239.28, Min=114.53
+  Tiers: A:1, A+:8, S:5, S+:6
+
+Division 2 (Wednesday):
+  Teams: 20/20
+  Rating: Avg=89.09, Max=108.28, Min=79.81
+  Tiers: A:4, B:12, B+:4
+
+Division 3 (Monday):
+  Teams: 20/20
+  Rating: Avg=71.20, Max=78.98, Min=64.91
+  Tiers: B:6, C:1, C+:13
+
+Division 4 (Thursday):
+  Teams: 20/20
+  Rating: Avg=61.15, Max=76.91, Min=55.70
+  Tiers: B:1, C:18, C+:1
+
+Division 5 (Monday):
+  Teams: 20/20
+  Rating: Avg=51.56, Max=63.72, Min=45.54
+  Tiers: C:5, C-:15
+
+Division 6 (Wednesday):
+  Teams: 20/20
+  Rating: Avg=39.82, Max=58.64, Min=31.59
+  Tiers: C:1, C-:1, D:7, D+:11
+
+Division 7 (Monday):
+  Teams: 17/20
+  Rating: Avg=23.01, Max=43.05, Min=5.45
+  Tiers: D:5, D+:3, D-:9
+
+======================================================================
+⚠️  UNPLACED TEAMS (3):
+======================================================================
+  New Alliance (Rating: 91.67) - NO COMPATIBLE DIVISIONS
+  Ardor Impact (Rating: 19.39) - Compatible: Div 1, 4
+  Karasuno (Rating: 15.90) - Compatible: Div 1, 2, 4, 6
+
+======================================================================
+✅ DIVISION SEEDING COMPLETE
+======================================================================
+Saved to: output/division_assignments.json

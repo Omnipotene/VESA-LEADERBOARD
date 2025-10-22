@@ -1,0 +1,162 @@
+Loading season data...
+  Loaded s4: 161 players
+  Loaded s5: 197 players
+  Loaded s6: 213 players
+  Loaded s8: 244 players
+  Loaded s11: 132 players
+  Loaded s12: 549 players
+
+================================================================================
+COMPREHENSIVE MISSING SEASON ANALYSIS
+================================================================================
+
+1. PLAYERS NOT IN ALIAS FILE: 557
+--------------------------------------------------------------------------------
+These players exist in season data but have no alias mapping:
+
+  Rank 6    Anteatter                      (ID: anteatter)
+           Current: S11
+  Rank 19   twitch.tv/kozmohs              (ID: twitch.tv/kozmohs)
+           Current: S11
+  Rank 22   Dare                           (ID: dare)
+           Current: S11
+  Rank 27   TNL_Colt                       (ID: tnl_colt)
+           Current: S11
+  Rank 39   Zaphyツ                         (ID: zaphyツ)
+           Current: S11
+  Rank 49   OzWaldo                        (ID: ozwaldo)
+           Current: S11
+  Rank 52   twitch.tv/apguapo              (ID: twitch.tv/apguapo)
+           Current: S12+S4+S5+S8
+  Rank 56   Mr_Hands_20                    (ID: mr_hands_20)
+           Current: S5+S6+S8
+  Rank 58   LeaderOfTheBees                (ID: leaderofthebees)
+           Current: S11
+  Rank 61   Omnipotene                     (ID: omnipotene)
+           Current: S11
+  Rank 64   zCrackdown                     (ID: zcrackdown)
+           Current: S11+S4+S5+S6
+  Rank 65   Todo_apex                      (ID: todo_apex)
+           Current: S11
+  Rank 69   Hawkeye2552                    (ID: hawkeye2552)
+           Current: S5+S6+S8
+  Rank 74   TwelveGage                     (ID: twelvegage)
+           Current: S12+S4+S6+S8
+  Rank 81   AUTHOR                         (ID: author)
+           Current: S5+S6+S8
+  Rank 83   ChosenSky                      (ID: chosensky)
+           Current: S11+S6
+  Rank 87   Hylandbound                    (ID: hylandbound)
+           Current: S5+S8
+  Rank 100  TheCoolPanda_                  (ID: thecoolpanda_)
+           Current: S12
+  Rank 101  Doctor Eloc                    (ID: doctor eloc)
+           Current: S5+S6+S8
+  Rank 103  Deetray                        (ID: deetray)
+           Current: S11
+  Rank 104  Broom                          (ID: broom)
+           Current: S11+S4+S5+S6
+  Rank 108  Jakoby                         (ID: jakoby)
+           Current: S11
+  Rank 109  kallax                         (ID: kallax)
+           Current: S4+S5+S6
+  Rank 111  SlyTitan                       (ID: slytitan)
+           Current: S11+S4+S5
+  Rank 119  JackHeDoesIt                   (ID: jackhedoesit)
+           Current: S4+S5+S6+S8
+  Rank 120  BossBBALLER101                 (ID: bossbballer101)
+           Current: S4+S5+S6+S8
+  Rank 124  Wolfer                         (ID: wolfer)
+           Current: S11+S6+S8
+  Rank 125  Calbeast                       (ID: calbeast)
+           Current: S5+S6+S8
+  Rank 126  ferris66                       (ID: ferris66)
+           Current: S4+S5+S6
+  Rank 130  Viva GOON                      (ID: viva goon)
+           Current: S4+S5+S6
+  Rank 131  MikieDelliii                   (ID: mikiedelliii)
+           Current: S4+S5+S6+S8
+  Rank 135  Dijaii                         (ID: dijaii)
+           Current: S12
+  Rank 138  AngryS0da                      (ID: angrys0da)
+           Current: S12+S5+S6+S8
+  Rank 141  FlareNotFlair                  (ID: flarenotflair)
+           Current: S11
+  Rank 146  eddyjr85                       (ID: eddyjr85)
+           Current: S4+S5+S6
+  Rank 152  YANKEE 6 XRAY                  (ID: yankee 6 xray)
+           Current: S5+S6+S8
+  Rank 157  OverratedMax                   (ID: overratedmax)
+           Current: S11+S5+S6
+  Rank 158  Bagel                          (ID: bagel)
+           Current: S4+S5+S6
+  Rank 159  LB Muggso                      (ID: lb muggso)
+           Current: S4+S5+S6
+  Rank 160  KoolAidMan                     (ID: koolaidman)
+           Current: S5+S6
+  Rank 163  Jinkx                          (ID: jinkx)
+           Current: S6+S8
+  Rank 166  LAZY3D                         (ID: lazy3d)
+           Current: S11
+  Rank 167  mer                            (ID: mer)
+           Current: S5+S6+S8
+  Rank 168  Supreme                        (ID: supreme)
+           Current: S12+S6+S8
+  Rank 172  Prophecy                       (ID: prophecy)
+           Current: S6
+  Rank 173  Luzer                          (ID: luzer)
+           Current: S5+S6
+  Rank 177  HotKnockz                      (ID: hotknockz)
+           Current: S11+S12
+  Rank 178  TONYPIKACHU                    (ID: tonypikachu)
+           Current: S6+S8
+  Rank 181  ZTtheman                       (ID: zttheman)
+           Current: S4+S5+S6
+  Rank 187  Monarch5079                    (ID: monarch5079)
+           Current: S5+S6
+
+  ... and 507 more
+
+
+2. PLAYERS WITH POTENTIAL MISSING SEASONS: 4
+--------------------------------------------------------------------------------
+These players have aliases found in seasons they're not credited for:
+
+
+Rank 107  PALMS                          Rating: 79.17
+       Current: S11+S12+S8
+       Missing:
+         S5: 1 match(es)
+            └─ Muchmixture9 (Rank 142, Score 125.00)
+
+Rank 522  twitch.tv/find0utt             Rating: 22.15
+       Current: S12+S6
+       Missing:
+         S8: 1 match(es)
+            └─ find0utt_TTV (Rank 72, Score 192.00)
+
+Rank 544  xeno!                          Rating: 21.04
+       Current: S12
+       Missing:
+         S11: 1 match(es)
+            └─ Dom (Rank 123, Score 5.85)
+
+Rank 845  TheLittlefoot93                Rating: 8.28
+       Current: S12
+       Missing:
+         S6: 1 match(es)
+            └─ ClarkGriswold (Rank 167, Score 103.00)
+
+
+================================================================================
+SUMMARY STATISTICS
+================================================================================
+Total players analyzed: 968
+  Players with complete data: 407 (42.0%)
+  Players missing from alias file: 557 (57.5%)
+  Players with missing seasons: 4 (0.4%)
+
+Total missing season instances: 4
+
+✓ Detailed report saved to: output/missing_seasons_report.json
+================================================================================

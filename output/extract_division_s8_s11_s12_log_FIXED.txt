@@ -1,0 +1,35 @@
+VESA League - Division History Extractor
+======================================================================
+S8: No division data available - skipped
+Loading S11 data...
+  S11: 132 players with inferred divisions
+Loading S12 data...
+  S12: 619 player entries
+
+Building division history...
+
+======================================================================
+DIVISION HISTORY EXTRACTED
+======================================================================
+Total players with division data: 706
+
+Consistency Bonus Distribution:
+  35% (Pinnacle I consistent): 85 players
+  15% (Mostly top-tier): 113 players
+  10% (Mid-tier): 255 players
+  5% (Lower-mid): 253 players
+  0% (No bonus): 0 players
+
+Example players with 35% bonus (Pinnacle I consistent):
+  anteatter: avg_score=10.0, seasons=S11
+  lumi: avg_score=10.0, seasons=S11
+  twitch.tv/kozmohs: avg_score=10.0, seasons=S11
+  dare: avg_score=10.0, seasons=S11
+  tnl_colt: avg_score=10.0, seasons=S11
+  lumdum: avg_score=10.0, seasons=S11
+  brode: avg_score=10.0, seasons=S11, S12
+  zaphyツ: avg_score=10.0, seasons=S11
+  seeby: avg_score=10.0, seasons=S11
+  ozwaldo: avg_score=10.0, seasons=S11
+
+Saved to: data/player_division_history.json
