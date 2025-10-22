@@ -69,39 +69,6 @@ def load_divisions():
         ORDER BY d.division_number, da.rank_in_division
     """
     df = pd.read_sql_query(query, conn)
-
-    # Apply custom tier thresholds if they've been set
-    if 'applied_tier_thresholds' in st.session_state and st.session_state.get('tier_changes_applied', False):
-        def assign_tier(rating, thresholds):
-            if rating >= thresholds['S+']:
-                return 'S+'
-            elif rating >= thresholds['S']:
-                return 'S'
-            elif rating >= thresholds['A+']:
-                return 'A+'
-            elif rating >= thresholds['A']:
-                return 'A'
-            elif rating >= thresholds['B+']:
-                return 'B+'
-            elif rating >= thresholds['B']:
-                return 'B'
-            elif rating >= thresholds['C+']:
-                return 'C+'
-            elif rating >= thresholds['C']:
-                return 'C'
-            elif rating >= thresholds['C-']:
-                return 'C-'
-            elif rating >= thresholds['D+']:
-                return 'D+'
-            elif rating >= thresholds['D']:
-                return 'D'
-            else:
-                return 'D-'
-
-        df['tier'] = df['team_rating'].apply(
-            lambda x: assign_tier(x, st.session_state.applied_tier_thresholds)
-        )
-
     return df
 
 @st.cache_data(ttl=300)
@@ -120,39 +87,6 @@ def load_teams():
         ORDER BY t.team_rating DESC
     """
     df = pd.read_sql_query(query, conn)
-
-    # Apply custom tier thresholds if they've been set
-    if 'applied_tier_thresholds' in st.session_state and st.session_state.get('tier_changes_applied', False):
-        def assign_tier(rating, thresholds):
-            if rating >= thresholds['S+']:
-                return 'S+'
-            elif rating >= thresholds['S']:
-                return 'S'
-            elif rating >= thresholds['A+']:
-                return 'A+'
-            elif rating >= thresholds['A']:
-                return 'A'
-            elif rating >= thresholds['B+']:
-                return 'B+'
-            elif rating >= thresholds['B']:
-                return 'B'
-            elif rating >= thresholds['C+']:
-                return 'C+'
-            elif rating >= thresholds['C']:
-                return 'C'
-            elif rating >= thresholds['C-']:
-                return 'C-'
-            elif rating >= thresholds['D+']:
-                return 'D+'
-            elif rating >= thresholds['D']:
-                return 'D'
-            else:
-                return 'D-'
-
-        df['tier'] = df['team_rating'].apply(
-            lambda x: assign_tier(x, st.session_state.applied_tier_thresholds)
-        )
-
     return df
 
 @st.cache_data(ttl=300)
@@ -790,16 +724,66 @@ def main():
             with col2:
                 if st.button("✅ Apply New Thresholds", type="primary", use_container_width=True):
                     # Apply the new tier assignments
-                    with st.spinner("Updating tier assignments..."):
+                    with st.spinner("Updating tier assignments in database..."):
                         try:
-                            # Store the new tiers
-                            st.session_state.applied_tier_thresholds = st.session_state.tier_thresholds.copy()
-                            st.session_state.tier_changes_applied = True
+                            # Function to assign tier based on rating
+                            def assign_tier(rating, thresholds):
+                                if rating >= thresholds['S+']:
+                                    return 'S+'
+                                elif rating >= thresholds['S']:
+                                    return 'S'
+                                elif rating >= thresholds['A+']:
+                                    return 'A+'
+                                elif rating >= thresholds['A']:
+                                    return 'A'
+                                elif rating >= thresholds['B+']:
+                                    return 'B+'
+                                elif rating >= thresholds['B']:
+                                    return 'B'
+                                elif rating >= thresholds['C+']:
+                                    return 'C+'
+                                elif rating >= thresholds['C']:
+                                    return 'C'
+                                elif rating >= thresholds['C-']:
+                                    return 'C-'
+                                elif rating >= thresholds['D+']:
+                                    return 'D+'
+                                elif rating >= thresholds['D']:
+                                    return 'D'
+                                else:
+                                    return 'D-'
 
-                            # Clear cache to reload data with new tiers
+                            # Get database connection
+                            conn = get_database_connection()
+                            cursor = conn.cursor()
+
+                            # Get all S12 teams
+                            cursor.execute("""
+                                SELECT team_id, team_rating
+                                FROM teams
+                                WHERE season_id = (SELECT season_id FROM seasons WHERE season_name = 'S12')
+                            """)
+                            teams = cursor.fetchall()
+
+                            # Update each team's tier in the database
+                            teams_updated = 0
+                            for team_id, team_rating in teams:
+                                new_tier = assign_tier(team_rating, st.session_state.tier_thresholds)
+                                cursor.execute("""
+                                    UPDATE teams
+                                    SET tier = ?
+                                    WHERE team_id = ?
+                                """, (new_tier, team_id))
+                                teams_updated += 1
+
+                            # Commit the changes
+                            conn.commit()
+
+                            # Clear cache to reload data with new tiers from database
                             load_teams.clear()
+                            load_divisions.clear()
 
-                            st.success("✅ Tier thresholds applied! Teams have been reassigned to new tiers.")
+                            st.success(f"✅ Tier thresholds applied! {teams_updated} teams have been permanently reassigned to new tiers in the database.")
                             st.rerun()
                         except Exception as e:
                             st.error(f"Error applying tier thresholds: {str(e)}")
