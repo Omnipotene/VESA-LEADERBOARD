@@ -210,13 +210,42 @@ def load_lobby_bonuses_from_db():
 def load_season_weights_from_db():
     """Load season weights from database"""
     conn = get_database_connection()
-    query = "SELECT season_name, weight_percentage FROM season_weights ORDER BY season_name DESC"
-    df = pd.read_sql_query(query, conn)
-    # Convert to dictionary
-    weights = {}
-    for _, row in df.iterrows():
-        weights[row['season_name']] = float(row['weight_percentage'])
-    return weights
+    cursor = conn.cursor()
+
+    try:
+        # Create table if it doesn't exist
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS season_weights (
+                config_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                season_name VARCHAR(20) NOT NULL,
+                weight_percentage DECIMAL(5,2) NOT NULL,
+                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                UNIQUE(season_name)
+            )
+        """)
+
+        # Check if weights exist, if not insert defaults
+        cursor.execute("SELECT COUNT(*) FROM season_weights")
+        count = cursor.fetchone()[0]
+
+        if count == 0:
+            cursor.execute("""
+                INSERT INTO season_weights (season_name, weight_percentage)
+                VALUES ('S12', 100.0), ('S11', 0.0)
+            """)
+            conn.commit()
+
+        query = "SELECT season_name, weight_percentage FROM season_weights ORDER BY season_name DESC"
+        df = pd.read_sql_query(query, conn)
+        # Convert to dictionary
+        weights = {}
+        for _, row in df.iterrows():
+            weights[row['season_name']] = float(row['weight_percentage'])
+        return weights
+    except Exception as e:
+        print(f"Error loading season weights: {e}")
+        # Return defaults if there's an error
+        return {'S12': 100.0, 'S11': 0.0}
 
 def recalculate_player_ratings(lobby_performances_df, lobby_bonuses, season_weights):
     """Recalculate player ratings with new lobby bonuses and season weights"""
@@ -317,15 +346,38 @@ def verify_admin_password(password):
     """Verify admin password against stored hash"""
     conn = get_database_connection()
     cursor = conn.cursor()
-    cursor.execute("SELECT config_value FROM admin_config WHERE config_key = 'admin_password_hash'")
-    result = cursor.fetchone()
 
-    if result is None:
+    try:
+        # Try to create the admin_config table if it doesn't exist
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS admin_config (
+                config_key VARCHAR(50) PRIMARY KEY,
+                config_value TEXT NOT NULL,
+                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            )
+        """)
+
+        # Check if password hash exists, if not insert default
+        cursor.execute("SELECT config_value FROM admin_config WHERE config_key = 'admin_password_hash'")
+        result = cursor.fetchone()
+
+        if result is None:
+            # Insert default password hash for 'vesaadmin1'
+            default_hash = '5c92f47698b144c721c98abbf36afbed62b3f7fb4da8e2d1f9da809d65fa5222'
+            cursor.execute("""
+                INSERT INTO admin_config (config_key, config_value)
+                VALUES ('admin_password_hash', ?)
+            """, (default_hash,))
+            conn.commit()
+            result = (default_hash,)
+
+        stored_hash = result[0]
+        input_hash = hashlib.sha256(password.encode()).hexdigest()
+        return input_hash == stored_hash
+    except Exception as e:
+        # If there's any error, log it and return False
+        print(f"Error verifying admin password: {e}")
         return False
-
-    stored_hash = result[0]
-    input_hash = hashlib.sha256(password.encode()).hexdigest()
-    return input_hash == stored_hash
 
 # Main app
 def main():
