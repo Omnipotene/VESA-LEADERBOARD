@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Environment variables
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+output/*.log
+output/*_log.txt
+
+# Temporary files
+*.tmp
+*.bak
+
+# Large output files (keep only essential data)
+output/*.json
+!output/division_assignments_with_changes.csv
+!output/division_summary.csv
+
+# Don't ignore the database (we need it for the app!)
+# vesa_league.db will be included
