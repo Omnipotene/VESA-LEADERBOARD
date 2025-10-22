@@ -373,10 +373,21 @@ def verify_admin_password(password):
 
         stored_hash = result[0]
         input_hash = hashlib.sha256(password.encode()).hexdigest()
+
+        # Store debug info in session state for display
+        if 'debug_info' not in st.session_state:
+            st.session_state.debug_info = {}
+        st.session_state.debug_info['stored_hash'] = stored_hash
+        st.session_state.debug_info['input_hash'] = input_hash
+        st.session_state.debug_info['match'] = (input_hash == stored_hash)
+
         return input_hash == stored_hash
     except Exception as e:
-        # If there's any error, log it and return False
+        # If there's any error, log it and store in session state
         print(f"Error verifying admin password: {e}")
+        if 'debug_info' not in st.session_state:
+            st.session_state.debug_info = {}
+        st.session_state.debug_info['error'] = str(e)
         return False
 
 # Main app
@@ -627,6 +638,15 @@ def main():
                     st.rerun()
                 else:
                     st.sidebar.error("❌ Incorrect password")
+                    # Show debug info if available
+                    if 'debug_info' in st.session_state:
+                        with st.sidebar.expander("🔍 Debug Info"):
+                            if 'error' in st.session_state.debug_info:
+                                st.error(f"Error: {st.session_state.debug_info['error']}")
+                            else:
+                                st.write(f"**Stored hash:** {st.session_state.debug_info.get('stored_hash', 'N/A')[:16]}...")
+                                st.write(f"**Input hash:** {st.session_state.debug_info.get('input_hash', 'N/A')[:16]}...")
+                                st.write(f"**Match:** {st.session_state.debug_info.get('match', 'N/A')}")
         else:
             # Show logout button
             st.sidebar.success("✅ Authenticated")
