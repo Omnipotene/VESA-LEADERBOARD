@@ -11,6 +11,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 from collections import defaultdict
 import json
+import hashlib
 
 # Page config
 st.set_page_config(
@@ -312,6 +313,20 @@ def format_rank_change(change):
     else:
         return '<span>=</span>'
 
+def verify_admin_password(password):
+    """Verify admin password against stored hash"""
+    conn = get_database_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT config_value FROM admin_config WHERE config_key = 'admin_password_hash'")
+    result = cursor.fetchone()
+
+    if result is None:
+        return False
+
+    stored_hash = result[0]
+    input_hash = hashlib.sha256(password.encode()).hexdigest()
+    return input_hash == stored_hash
+
 # Main app
 def main():
     st.title("🎮 VESA League S12 - Division Dashboard")
@@ -542,13 +557,36 @@ def main():
     elif page == "⚙️ Settings":
         st.header("Configuration & Settings")
 
-        # Admin mode toggle
-        admin_mode = st.sidebar.checkbox("🔓 Enable Admin Mode", value=False)
+        # Admin authentication in sidebar
+        st.sidebar.subheader("🔐 Admin Access")
+
+        # Initialize session state for admin authentication
+        if 'admin_authenticated' not in st.session_state:
+            st.session_state.admin_authenticated = False
+
+        admin_mode = False
+
+        if not st.session_state.admin_authenticated:
+            # Show password input
+            admin_password = st.sidebar.text_input("Admin Password", type="password", key="admin_pass")
+            if st.sidebar.button("🔓 Login", use_container_width=True):
+                if verify_admin_password(admin_password):
+                    st.session_state.admin_authenticated = True
+                    st.rerun()
+                else:
+                    st.sidebar.error("❌ Incorrect password")
+        else:
+            # Show logout button
+            st.sidebar.success("✅ Authenticated")
+            if st.sidebar.button("🔒 Logout", use_container_width=True):
+                st.session_state.admin_authenticated = False
+                st.rerun()
+            admin_mode = True
 
         if admin_mode:
             st.success("✅ Admin Mode Enabled - You can now adjust settings")
         else:
-            st.info("ℹ️ Viewing current settings (Enable Admin Mode in sidebar to edit)")
+            st.info("ℹ️ Viewing current settings (Login with admin password to edit)")
 
         st.divider()
 
